@@ -14,7 +14,8 @@
 #Logo {
 	background-image: url(//wangyifang.com/share/v2ex-dark/logo.svg)!important;
 	margin-left: 0rem;
-	width: 115px;
+	width: 170px;
+	background-size: 149px 30px;
 }
 #qbar {
 	background-image: url(//wangyifang.com/share/v2ex-dark/qbar_dark@2x.png)!important;
