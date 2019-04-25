@@ -1,0 +1,253 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	word-break: break-all;
+}
+html {
+	height: 100%;
+	background: #ffffff;
+}
+body {
+	min-width: 300px;
+	height: 100%;
+}
+.wifi-bg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: -1;
+}
+.wifi-bg img {
+	width: 100%;
+	height: 100%;
+	filter: opacity(10%) blur(10px);
+}
+.wifi-body {
+	box-sizing: border-box;
+}
+.wifi-content {
+	margin-bottom: 20px;
+}
+.wifi-foot {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #cccccc;
+}
+a:visited {
+	color: #cccccc;
+}
+a:hover {
+	color: #cccccc;
+}
+a:active {
+	color: #cccccc;
+}
+.wifi-face {
+	display: flex;
+	justify-content: center;
+	padding-top: 100px;
+}
+.wifi-face img {
+	width: 88px;
+	height: 88px;
+}
+.wifi-txt {
+	display: flex;
+	justify-content: center;
+	margin: 30px 0;
+	height: 93px;
+}
+.wifi-links {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: stretch;
+	font-size: 15px;
+	color: #4F4F4F;
+	letter-spacing: 0.78px;
+	max-width: 750px;
+	min-width: 300px;
+}
+.wifi-link-img {
+	position: relative;
+	width: 70px;
+	height: 70px;
+}
+.wifi-linkloading {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background: #F4F4F4;
+	border-radius: 50%;
+	top: 0;
+	z-index: -2;
+}
+.linktxt {
+	margin-top: 5px;
+	color: #3e3e3e;
+}
+.wifi-link {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin: 30px 18px 5px;
+	width: 75px;
+	opacity: 1;
+	transition: opacity 0.4s;
+	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
+}
+.wifi-link img {
+	width: 70px;
+	height: 70px;
+}
+.wifi-link:hover {
+	opacity: 0.5;
+}
+.wifi-line {
+	display: flex;
+	background: #efefef;
+	height: 1px;
+	margin: 25px;
+}
+.wifi-other {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: stretch;
+	max-width: 960px;
+	min-width: 300px;
+}
+.wifi-text {
+	display: flex;
+	font-size: 16px;
+	color: #3e3e3e;
+	letter-spacing: 0.78px;
+	text-align: center;
+	line-height: 33px;
+	font-weight: 300;
+	background: #ffffff00;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #e2e2e2;
+	border-radius: 7px;
+	padding: 0 15px;
+	margin: 10px;
+	font-family: sans-serif;
+	transition: background 0.4s, border 0.4s, color 0.4s;
+	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
+}
+.wifi-text-qr {
+	position: relative;
+}
+.wifi-qr {
+	position: absolute;
+	z-index: 1;
+	top: 100%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -79px;
+	background: #FFFFFF;
+	box-shadow: 0 1px 37px 0 rgba(0,0,0,0.08);
+	border-radius: 17px;
+	width: 158px;
+	height: 158px;
+	opacity: 0;
+	transform: scale(0.9);
+	transition: all 0.15s;
+	transition-timing-function: ease-in-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+}
+.wifi-qr img {
+	width: 140px;
+	height: 140px;
+	pointer-events: none;
+}
+.wifi-text:hover {
+	background: #000000;
+	border: 1px solid #000000;
+	color: #ffffff;
+}
+.wifi-text-qr:hover .wifi-qr {
+	opacity: 1;
+	top: 50%;
+	left: 50%;
+	transform: scale(1);
+}
+.wifi-foot-links {
+	margin: 0 auto 10px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.wifi-foot-link {
+	margin: 5px 10px;
+	padding: 0 8px;
+	word-break: normal;
+	height: 15px;
+	border: 1px solid #efefef;
+	border-radius: 4px;
+	font-size: 9px;
+	color: #cccccc;
+	text-align: center;
+	line-height: 14px;
+	letter-spacing: 0.47px;
+}
+.wifi-copyright, .wifi-beian {
+	font-size: 11px;
+	color: #cccccc;
+	text-align: center;
+	line-height: 18px;
+	letter-spacing: 0.47px;
+	margin: 6px 20px 0px 20px;
+}
+.wifi-beian {
+	margin: 10px 5px 0px 5px;
+	line-height: 12px;
+}
+.wifi-beian-a:link {
+	color: #cccccc;
+}
+.wifi-beian-a:visited {
+	color: #cccccc;
+}
+.wifi-beian-a:hover {
+	color: #cccccc;
+}
+.wifi-beian-a:active {
+	color: #cccccc;
+}
+.wifi-beians {
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+	max-width: 1250px;
+	display: flex;
+	margin: 0 auto;
+}
+.wifi-url1{
+	height: 17px;
+	margin-top: 8px;
+	margin-right: 8px;
+}
+.wifi-url2 {
+	height: 17px;
+	margin-top: 8px;
+	margin-left: 8px;
+}
+.wifi-bg video {
+	width: 100%;
+}
