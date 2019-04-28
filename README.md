@@ -1,7 +1,7 @@
 # wyfang.github.io | wangyifang.com
 
-漂亮的个人社区主页
+A personal website with html+css that adapts to all devices and supports automatic night mode; there are small social links.
 
-他们在使用：
+They are using：
 https://zhujingyu.com/
 http://yuban.csgo.link/
