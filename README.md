@@ -1,4 +1,4 @@
-# wyfang.github.io | wangyifang.com
+# wyfang.github.io & wangyifang.com
 
 A personal website with html+css that adapts to all devices and supports automatic night mode.
 
