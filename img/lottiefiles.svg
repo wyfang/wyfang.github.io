@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180px" height="180px" viewBox="0 0 180 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>编组</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="18.8888889%" y1="12.2113715%" x2="81.1111111%" y2="88.3224826%" id="linearGradient-1">
+            <stop stop-color="#2BE9EC" offset="0%"></stop>
+            <stop stop-color="#10CCCD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" fill-rule="nonzero">
+            <circle id="椭圆形" fill="url(#linearGradient-1)" cx="90" cy="90" r="90"></circle>
+            <path d="M131.885373,42.0893122 C108.389806,45.8789197 92.0702796,62.198446 83.3249213,89.8920804 C76.1488201,112.616401 64.4855349,123.446594 47.7667962,124.003886 C43.9029489,124.132681 40.8750907,127.369357 41.0038857,131.233204 C41.1326806,135.097051 44.3693565,138.124909 48.2332038,137.996114 C71.5144651,137.220072 87.8511799,122.050266 96.6750787,94.1079196 C103.92972,71.1348873 116.276861,58.7877469 134.114627,55.9106878 C137.931295,55.2950963 140.526279,51.7020404 139.910688,47.8853729 C139.295096,44.0687054 135.70204,41.4737206 131.885373,42.0893122 Z" id="路径" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

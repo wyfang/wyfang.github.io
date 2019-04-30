@@ -1,4 +1,12 @@
 /*------*/
+#glint {
+	width: 160px;
+    height: 160px;
+    position: absolute;
+    z-index: 2;
+    left: -46px;
+    top: -40px;
+}
 #luckincoffee {
   	height: 22px;
     width: 22px;
@@ -105,6 +113,7 @@ a:active {
 	color: #3e3e3e;
 }
 .wifi-link {
+	position: relative;
 	display: flex;
 	align-items: center;
 	text-align: center;
