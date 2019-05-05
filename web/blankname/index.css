@@ -24,6 +24,7 @@ html, body {
 .wifi2 {
 	flex: 1;
 	height: 90%;
+	min-width: 550px;
 	background: #0094F7;
 	box-shadow: -41px 0 223px 0 rgba(0,148,247,0.19);
 }
