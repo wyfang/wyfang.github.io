@@ -53,12 +53,13 @@ html, body {
 .zhuti4 {
 	flex: 1;
 	display: flex;
+	flex-wrap: wrap;
 }
 .zhuti5 {
 	flex: 1;
 }
 .download,.lianxiwo {
-	width: 280px;
+	min-width: 280px;
 	position: relative;
 	top: 0px;
 	height: 84px;
