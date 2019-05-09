@@ -84,7 +84,7 @@ a:active {
 @keyframes wifi-6
 {
     from {color: #3e3e3e; background: #ffffff00;border-color: #e2e2e2;}
-    to {color: #888888; background: #ffffff0a; border-color: #ffffff00;}
+    to {color: #cacaca; background: #00000078; border-color: #5d5d5d00;}
 }
 .wifi-text {
 	display: flex;
@@ -102,9 +102,9 @@ a:active {
     transition: background 0.4s, border 0.4s, color 0.4s;
     transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
     animation: wifi-6 2s;
-    color: #888888;
-    background: #ffffff0a;
-    border-color: #ffffff00;
+    color: #cacaca;
+    background: #00000078;
+    border-color: #5d5d5d00;
 }
 @keyframes wifi-8
 {
