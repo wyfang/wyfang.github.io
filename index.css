@@ -36,13 +36,13 @@ body {
     height: 100%;
     margin: 0 auto;
     position: fixed;
-    top: 0px;
     z-index: -100;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+   	opacity: 0;
 }
-.wifi-bg img {
+.wifi-bg-img {
 	width: 100%;
 	height: 100%;
 	filter: opacity(10%) blur(10px);
@@ -50,14 +50,17 @@ body {
 .wifi-bg-video {
 	margin: 0 auto;
     width: 100%;
+    height: 100%;
     max-width: 1920px;
     position: relative;
+    z-index: -101;
 }
 .wifi-bg-videomark {
-	background-color: #0000007a;
+	background-color: #0000005e;
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 1;
 }
 .wifi-body {
 	box-sizing: border-box;
@@ -286,4 +289,36 @@ a:active {
 .wifi-bg video {
 	width: 100%;
     margin: 0 auto;
+    z-index: -103;
+    opacity: 0;
+}
+.wifi-bg-video-lowposter {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -104;
+}
+.wifi-bg-video-lowposter img {
+	width: 100%;
+	filter: blur(10px);
+}
+@keyframes wifi-1
+{
+    from {background: #20212400; opacity: 0;}
+    to {background: #000000; opacity: 1;} /*视频背景需要调节背景颜色*/
+}
+.wifi-bg {
+	animation: wifi-1 2s;
+	animation-fill-mode: forwards;
+}
+@keyframes wifi-10
+{
+    from {opacity: 0;}
+    to {opacity: 1;} 
+}
+.wifi-bg video {
+	animation: wifi-10 2s;
+	animation-fill-mode: forwards;
+	animation-delay:2s;
 }

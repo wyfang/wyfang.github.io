@@ -1,13 +1,4 @@
-@keyframes wifi-1
-{
-    from {background: #20212400;}
-    to {background: #000000;} /*视频背景需要调节背景颜色*/
-}
-.wifi-bg {
-	animation: wifi-1 2s;
-	animation-fill-mode: forwards;
-}
-.wifi-bg img {
+.wifi-bg-img {
 	filter: opacity(5%) blur(10px);
 }
 @keyframes wifi-2
