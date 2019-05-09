@@ -1,7 +1,7 @@
 @keyframes wifi-1
 {
     from {background: #20212400;}
-    to {background: #202124;}
+    to {background: #000000;} //视频背景需要调节背景颜色
 }
 .wifi-bg {
 	animation: wifi-1 2s;
@@ -175,7 +175,4 @@ a:active {
     margin-left: 8px;
     animation: wifi-7 2s;
     animation-fill-mode: forwards;
-}
-.wifi-bg video {
-    width: 100%;
 }

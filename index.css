@@ -32,22 +32,28 @@ body {
 }
 .wifi-bg {
 	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0px;
-	z-index: -1;
+    height: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0px;
+    z-index: -1;
 }
 .wifi-bg img {
 	width: 100%;
 	height: 100%;
 	filter: opacity(10%) blur(10px);
 }
+.wifi-bg-video {
+	margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+}
 .wifi-bg-videomark {
-	background-color: #00000073;
+	background-color: #0000007a;
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0px;
+    position: absolute;
 }
 .wifi-body {
 	box-sizing: border-box;
@@ -275,4 +281,5 @@ a:active {
 }
 .wifi-bg video {
 	width: 100%;
+    margin: 0 auto;
 }
