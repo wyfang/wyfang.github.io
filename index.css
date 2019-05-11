@@ -214,6 +214,14 @@ a:active {
 	height: 140px;
 	pointer-events: none;
 }
+.wifi-qr div {
+	width:10px;
+	height:10px;
+	background-color: white;
+	position: absolute;
+	bottom: -5px;
+	transform: rotate(45deg);
+}
 .wifi-text:hover {
 	background: #000000;
 	border: 1px solid #000000;
