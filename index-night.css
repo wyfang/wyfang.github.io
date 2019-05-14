@@ -1,100 +1,125 @@
 .wifi-bg-img {
 	filter: opacity(5%) blur(10px);
 }
+
 @keyframes wifi-2 {
- from {
-filter: invert(0%) opacity(100%);
+	from {
+		filter: invert(0%) opacity(100%);
+	}
+
+	to {
+		filter: invert(100%) opacity(90%);
+	}
 }
- to {
-filter: invert(100%) opacity(90%);
-}
-}
+
 .wifi-txt img {
 	animation: wifi-2 2s;
 	animation-fill-mode: forwards;
 }
+
 .wifi-foot {
 	display: flex;
 	flex-direction: column;
 }
+
 a:link {
 	color: #bdbdbd;
 }
+
 a:visited {
 	color: #bdbdbd;
 }
+
 a:hover {
 	color: #bdbdbd;
 }
+
 a:active {
 	color: #bdbdbd;
 }
- @keyframes wifi-3 {
- from {
-filter: invert(0%) opacity(100%);
+
+@keyframes wifi-3 {
+	from {
+		filter: invert(0%) opacity(100%);
+	}
+
+	to {
+		filter: invert(100%) opacity(90%);
+	}
 }
- to {
-filter: invert(100%) opacity(90%);
-}
-}
+
 .wifi-face img {
 	animation: wifi-3 2s;
 	animation-fill-mode: forwards;
 }
+
 .wifi-link-img {
 	height: 70px;
 }
+
 @keyframes wifi-4 {
- from {
-color: #3e3e3e;
+	from {
+		color: #3e3e3e;
+	}
+
+	to {
+		color: #bdbdbd;
+	}
 }
- to {
-color: #bdbdbd;
-}
-}
+
 .linktxt {
 	animation: wifi-4 2s;
 	animation-fill-mode: forwards;
 }
- @keyframes wifi-9 {
- from {
-filter: brightness(100%);
+
+@keyframes wifi-9 {
+	from {
+		filter: brightness(100%);
+	}
+
+	to {
+		filter: brightness(90%);
+	}
 }
- to {
-filter: brightness(90%);
-}
-}
+
 .wifi-link img {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
+
 .wifi-link:hover {
 	opacity: 0.8;
 }
+
 @keyframes wifi-5 {
- from {
-background: #efefef;
+	from {
+		background: #efefef;
+	}
+
+	to {
+		background: #424242;
+	}
 }
- to {
-background: #424242;
-}
-}
+
 .wifi-line {
 	animation: wifi-5 2s;
 	animation-fill-mode: forwards;
 }
+
 @keyframes wifi-6 {
- from {
-color: #3e3e3e;
-background: #ffffff00;
-border-color: #e2e2e2;
+	from {
+		color: #3e3e3e;
+		background: #ffffff00;
+		border-color: #e2e2e2;
+	}
+
+	to {
+		color: #cacaca;
+		background: #00000078;
+		border-color: #5d5d5d00;
+	}
 }
- to {
-color: #cacaca;
-background: #00000078;
-border-color: #5d5d5d00;
-}
-}
+
 .wifi-text {
 	display: flex;
 	font-size: 16px;
@@ -115,16 +140,19 @@ border-color: #5d5d5d00;
 	background: #00000078;
 	border-color: #5d5d5d00;
 }
+
 @keyframes wifi-8 {
- from {
-border: 1px solid #efefef;
-color: #cccccc;
+	from {
+		border: 1px solid #efefef;
+		color: #cccccc;
+	}
+
+	to {
+		border: 1px solid #4a4a4a;
+		color: #7d7d7d;
+	}
 }
- to {
-border: 1px solid #4a4a4a;
-color: #7d7d7d;
-}
-}
+
 .wifi-foot-link {
 	padding: 0 8px;
 	word-break: normal;
@@ -137,34 +165,43 @@ color: #7d7d7d;
 	animation: wifi-8 2s;
 	animation-fill-mode: forwards;
 }
+
 @keyframes wifi-9 {
- from {
-color: #cccccc;
+	from {
+		color: #cccccc;
+	}
+
+	to {
+		color: #757575;
+	}
 }
- to {
-color: #757575;
-}
-}
-.wifi-copyright, .wifi-beian {
+
+.wifi-copyright,
+.wifi-beian {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
+
 .wifi-beian-a:link {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
+
 .wifi-beian-a:visited {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
+
 .wifi-beian-a:hover {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
+
 .wifi-beian-a:active {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
+
 .wifi-beians {
 	justify-content: center;
 	flex-wrap: wrap;
@@ -173,14 +210,17 @@ color: #757575;
 	display: flex;
 	margin: 0 auto;
 }
+
 @keyframes wifi-7 {
- from {
-filter: brightness(100%);
+	from {
+		filter: brightness(100%);
+	}
+
+	to {
+		filter: brightness(55%);
+	}
 }
- to {
-filter: brightness(55%);
-}
-}
+
 .wifi-url1 {
 	height: 17px;
 	margin-top: 8px;
@@ -188,6 +228,7 @@ filter: brightness(55%);
 	animation: wifi-7 2s;
 	animation-fill-mode: forwards;
 }
+
 .wifi-url2 {
 	height: 17px;
 	margin-top: 8px;
