@@ -1,3 +1,20 @@
+@keyframes wifi-1 {
+	from {
+		background: #20212400;
+		opacity: 0;
+	}
+
+	to {
+		background: #292929;
+		opacity: 1;
+	}
+}
+
+.wifi-bg {
+	animation: wifi-1 2s;
+	animation-fill-mode: forwards;
+}
+
 .wifi-bg-img {
 	filter: opacity(5%) blur(10px);
 }
