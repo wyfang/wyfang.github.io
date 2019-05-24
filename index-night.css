@@ -1,142 +1,114 @@
 @keyframes wifi-1 {
-	from {
-		background: #20212400;
-		opacity: 0;
-	}
-
-	to {
-		background: #000000db;
-		opacity: 1;
-	}
+ from {
+	background: #ffffff00;;
+	opacity: 0;
 }
-
+ to {
+	background: #000000;
+	opacity: 0.95;
+}
+}
 .wifi-bg {
 	animation: wifi-1 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-bg-img {
 	filter: opacity(5%) blur(10px);
 }
-
-@keyframes wifi-2 {
-	from {
-		filter: invert(0%) opacity(100%);
-	}
-
-	to {
-		filter: invert(100%) opacity(90%);
-	}
+ @keyframes wifi-2 {
+ from {
+ filter: invert(0%) opacity(100%);
 }
-
+ to {
+ filter: invert(100%) opacity(90%);
+}
+}
 .wifi-txt img {
 	animation: wifi-2 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-foot {
 	display: flex;
 	flex-direction: column;
 }
-
 a:link {
 	color: #bdbdbd;
 }
-
 a:visited {
 	color: #bdbdbd;
 }
-
 a:hover {
 	color: #bdbdbd;
 }
-
 a:active {
 	color: #bdbdbd;
 }
-
-@keyframes wifi-3 {
-	from {
-		filter: invert(0%) opacity(100%);
-	}
-
-	to {
-		filter: invert(100%) opacity(90%);
-	}
+ @keyframes wifi-3 {
+ from {
+ filter: invert(0%) opacity(100%);
 }
-
+ to {
+ filter: invert(100%) opacity(90%);
+}
+}
 .wifi-face img {
 	animation: wifi-3 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-link-img {
 	height: 70px;
 }
-
-@keyframes wifi-4 {
-	from {
-		color: #3e3e3e;
-	}
-
-	to {
-		color: #bdbdbd;
-	}
+ @keyframes wifi-4 {
+ from {
+ color: #3e3e3e;
 }
-
+ to {
+ color: #bdbdbd;
+}
+}
 .linktxt {
 	animation: wifi-4 2s;
 	animation-fill-mode: forwards;
 }
-
-@keyframes wifi-9 {
-	from {
-		filter: brightness(100%);
-	}
-
-	to {
-		filter: brightness(90%);
-	}
+ @keyframes wifi-9 {
+ from {
+ filter: brightness(100%);
 }
-
+ to {
+ filter: brightness(90%);
+}
+}
 .wifi-link img {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-link:hover {
 	opacity: 0.8;
 }
-
-@keyframes wifi-5 {
-	from {
-		background: #efefef;
-	}
-
-	to {
-		background: #424242;
-	}
+ @keyframes wifi-5 {
+ from {
+ background: #efefef;
 }
-
+ to {
+ background: #424242;
+}
+}
 .wifi-line {
 	animation: wifi-5 2s;
 	animation-fill-mode: forwards;
 }
-
-@keyframes wifi-6 {
-	from {
-		color: #3e3e3e;
-		background: #ffffff00;
-		border-color: #e2e2e2;
-	}
-
-	to {
-		color: #cacaca;
-		background: #00000078;
-		border-color: #5d5d5d00;
-	}
+ @keyframes wifi-6 {
+ from {
+ color: #3e3e3e;
+ background: #ffffff00;
+ border-color: #e2e2e2;
 }
-
+ to {
+ color: #cacaca;
+ background: #00000078;
+ border-color: #5d5d5d00;
+}
+}
 .wifi-text {
 	display: flex;
 	font-size: 16px;
@@ -157,19 +129,16 @@ a:active {
 	background: #00000078;
 	border-color: #5d5d5d00;
 }
-
-@keyframes wifi-8 {
-	from {
-		border: 1px solid #efefef;
-		color: #cccccc;
-	}
-
-	to {
-		border: 1px solid #4a4a4a;
-		color: #7d7d7d;
-	}
+ @keyframes wifi-8 {
+ from {
+ border: 1px solid #efefef;
+ color: #cccccc;
 }
-
+ to {
+ border: 1px solid #4a4a4a;
+ color: #7d7d7d;
+}
+}
 .wifi-foot-link {
 	padding: 0 8px;
 	word-break: normal;
@@ -182,43 +151,34 @@ a:active {
 	animation: wifi-8 2s;
 	animation-fill-mode: forwards;
 }
-
-@keyframes wifi-9 {
-	from {
-		color: #cccccc;
-	}
-
-	to {
-		color: #757575;
-	}
+ @keyframes wifi-9 {
+ from {
+ color: #cccccc;
 }
-
-.wifi-copyright,
-.wifi-beian {
+ to {
+ color: #757575;
+}
+}
+.wifi-copyright, .wifi-beian {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-beian-a:link {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-beian-a:visited {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-beian-a:hover {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-beian-a:active {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-beians {
 	justify-content: center;
 	flex-wrap: wrap;
@@ -227,17 +187,14 @@ a:active {
 	display: flex;
 	margin: 0 auto;
 }
-
-@keyframes wifi-7 {
-	from {
-		filter: brightness(100%);
-	}
-
-	to {
-		filter: brightness(55%);
-	}
+ @keyframes wifi-7 {
+ from {
+ filter: brightness(100%);
 }
-
+ to {
+ filter: brightness(55%);
+}
+}
 .wifi-url1 {
 	height: 17px;
 	margin-top: 8px;
@@ -245,7 +202,6 @@ a:active {
 	animation: wifi-7 2s;
 	animation-fill-mode: forwards;
 }
-
 .wifi-url2 {
 	height: 17px;
 	margin-top: 8px;
