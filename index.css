@@ -363,24 +363,6 @@ a:active {
 	filter: blur(10px);
 }
 
-@keyframes wifi-1 {
-	from {
-		background: #20212400;
-		opacity: 0;
-	}
-
-	to {
-		background: #000000;
-		opacity: 1;
-	}
-
-	/*视频背景需要调节背景颜色*/
-}
-
-.wifi-bg {
-	animation: wifi-1 2s;
-	animation-fill-mode: forwards;
-}
 
 @keyframes wifi-10 {
 	from {
