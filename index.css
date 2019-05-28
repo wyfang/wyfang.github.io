@@ -199,7 +199,7 @@ a:active {
 .wifi-qr {
 	position: absolute;
 	z-index: 1;
-	top: 60px;
+	top: 56px;
 	left: 50%;
 	margin-top: -196px;
 	margin-left: -79px;
