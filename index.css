@@ -8,12 +8,14 @@
 	top: -40px;
 	pointer-events: none;
 }
+
 #luckincoffee {
 	height: 22px;
 	width: 22px;
 	margin-top: 4px;
 	margin-right: 7px;
 }
+
 /*---Lottie---*/
 * {
 	box-sizing: border-box;
@@ -22,26 +24,32 @@
 	font-family: Arial, Helvetica, sans-serif;
 	word-break: break-all;
 }
+
 html {
 	height: 100%;
 }
+
 body {
 	min-width: 300px;
 	height: 100%;
 }
+
 .wifi-bg {
 	width: 150%;
 	height: 150%;
 	position: fixed;
 	top: -10%;
 	z-index: -100;
-	background: #ffffff00;;
+	background: #ffffff00;
+	;
 }
+
 .wifi-bg-img {
 	width: 100%;
 	height: 100%;
 	filter: opacity(10%) blur(10px);
 }
+
 .wifi-bg-v {
 	width: 100%;
 	min-width: 1040px;
@@ -55,6 +63,7 @@ body {
 	transform: translate(-50%, -50%);
 	opacity: 1;
 }
+
 .wifi-bg-video {
 	margin: 0 auto;
 	width: 100%;
@@ -63,53 +72,66 @@ body {
 	position: relative;
 	z-index: -101;
 }
+
 .wifi-bg-videomark {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	z-index: 1;
 }
+
 .wifi-body {
 	box-sizing: border-box;
 }
+
 .wifi-content {
 	margin-bottom: 20px;
 }
+
 .wifi-foot {
 	margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
 }
+
 a {
 	text-decoration: none;
 }
+
 a:link {
 	color: #cccccc;
 }
+
 a:visited {
 	color: #cccccc;
 }
+
 a:hover {
 	color: #cccccc;
 }
+
 a:active {
 	color: #cccccc;
 }
+
 .wifi-face {
 	display: flex;
 	justify-content: center;
 	padding-top: 100px;
 }
+
 .wifi-face img {
 	width: 88px;
 	height: 88px;
 }
+
 .wifi-txt {
 	display: flex;
 	justify-content: center;
 	margin: 30px 0;
 	height: 93px;
 }
+
 .wifi-links {
 	display: flex;
 	margin: 0 auto;
@@ -122,11 +144,13 @@ a:active {
 	max-width: 750px;
 	min-width: 300px;
 }
+
 .wifi-link-img {
 	position: relative;
 	width: 70px;
 	height: 70px;
 }
+
 .wifi-linkloading {
 	position: absolute;
 	width: 70px;
@@ -136,10 +160,12 @@ a:active {
 	top: 0;
 	z-index: -2;
 }
+
 .linktxt {
 	margin-top: 5px;
 	color: #3e3e3e;
 }
+
 .wifi-link {
 	position: relative;
 	display: flex;
@@ -151,19 +177,23 @@ a:active {
 	transition: opacity 0.4s;
 	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
+
 .wifi-link img {
 	width: 70px;
 	height: 70px;
 }
+
 .wifi-link:hover {
 	opacity: 0.5;
 }
+
 .wifi-line {
 	display: flex;
 	background: #efefef;
 	height: 1px;
 	margin: 25px;
 }
+
 .wifi-other {
 	display: flex;
 	margin: 0 auto;
@@ -173,6 +203,7 @@ a:active {
 	max-width: 960px;
 	min-width: 300px;
 }
+
 .wifi-text {
 	display: flex;
 	font-size: 16px;
@@ -192,9 +223,11 @@ a:active {
 	transition: background 0.4s, border 0.4s, color 0.4s;
 	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
+
 .wifi-text-qr {
 	position: relative;
 }
+
 .wifi-qr {
 	position: absolute;
 	z-index: 1;
@@ -216,11 +249,13 @@ a:active {
 	align-items: center;
 	pointer-events: none;
 }
+
 .wifi-qr img {
 	width: 140px;
 	height: 140px;
 	pointer-events: none;
 }
+
 .wifi-qr div {
 	width: 10px;
 	height: 10px;
@@ -229,23 +264,27 @@ a:active {
 	bottom: -5px;
 	transform: rotate(45deg);
 }
+
 .wifi-text:hover {
 	background: #000000;
 	border: 1px solid #000000;
 	color: #ffffff;
 }
+
 .wifi-text-qr:hover .wifi-qr {
 	opacity: 1;
 	top: 28px;
 	left: 50%;
 	transform: scale(1);
 }
+
 .wifi-foot-links {
 	margin: 0 auto 10px;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
+
 .wifi-foot-link {
 	margin: 5px 10px;
 	padding: 0 8px;
@@ -259,7 +298,9 @@ a:active {
 	line-height: 14px;
 	letter-spacing: 0.47px;
 }
-.wifi-copyright, .wifi-beian {
+
+.wifi-copyright,
+.wifi-beian {
 	font-size: 11px;
 	color: #cccccc;
 	text-align: center;
@@ -267,22 +308,28 @@ a:active {
 	letter-spacing: 0.47px;
 	margin: 6px 20px 0px 20px;
 }
+
 .wifi-beian {
 	margin: 10px 5px 0px 5px;
 	line-height: 12px;
 }
+
 .wifi-beian-a:link {
 	color: #cccccc;
 }
+
 .wifi-beian-a:visited {
 	color: #cccccc;
 }
+
 .wifi-beian-a:hover {
 	color: #cccccc;
 }
+
 .wifi-beian-a:active {
 	color: #cccccc;
 }
+
 .wifi-beians {
 	justify-content: center;
 	flex-wrap: wrap;
@@ -291,22 +338,26 @@ a:active {
 	display: flex;
 	margin: 0 auto;
 }
+
 .wifi-url1 {
 	height: 17px;
 	margin-top: 8px;
 	margin-right: 8px;
 }
+
 .wifi-url2 {
 	height: 17px;
 	margin-top: 8px;
 	margin-left: 8px;
 }
+
 .wifi-bg-v video {
 	width: 100%;
 	margin: 0 auto;
 	z-index: -103;
 	opacity: 0;
 }
+
 .wifi-bg-video-lowposter {
 	width: 100%;
 	height: 100%;
@@ -314,20 +365,56 @@ a:active {
 	top: 0;
 	z-index: -104;
 }
+
 .wifi-bg-video-lowposter img {
 	width: 100%;
 	filter: blur(10px);
 }
- @keyframes wifi-10 {
- from {
- opacity: 0;
+
+@keyframes wifi-10 {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
- to {
- opacity: 1;
-}
-}
+
 .wifi-bg-v video {
 	animation: wifi-10 2s;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
+}
+
+.wifi-scroll::-webkit-scrollbar {
+	width: 3px;
+}
+
+/*正常情况下滑块的样式*/
+.wifi-scroll::-webkit-scrollbar-thumb {
+	background-color:#F4F4F4;
+	border-radius: 10px;
+}
+
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+.wifi-scroll:hover::-webkit-scrollbar-thumb {
+	background-color: #F4F4F4;
+	border-radius: 10px;
+}
+
+/*鼠标悬浮在滑块上时滑块的样式*/
+.wifi-scroll::-webkit-scrollbar-thumb:hover {
+	background-color:#F4F4F4;
+}
+
+/*正常时候的主干部分*/
+.wifi-scroll::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: #2d2d2d;
+}
+
+/*鼠标悬浮在滚动条上的主干部分*/
+.wifi-scroll::-webkit-scrollbar-track:hover {
+	background-color: #2d2d2d;
 }
