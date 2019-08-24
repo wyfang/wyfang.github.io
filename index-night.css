@@ -135,8 +135,8 @@ a:active {
  color: #cccccc;
 }
  to {
- border: 1px solid #4a4a4a;
- color: #7d7d7d;
+	border: 1px solid #151515;
+    color: #313131;
 }
 }
 .wifi-foot-link {
@@ -153,10 +153,10 @@ a:active {
 }
  @keyframes wifi-9 {
  from {
- color: #cccccc;
+ 	color: #cccccc;
 }
  to {
- color: #757575;
+	color: #313131;
 }
 }
 .wifi-copyright, .wifi-beian {
