@@ -387,10 +387,25 @@ a:active {
 	animation-delay: 2s;
 }
 
+@keyframes wifi-11 {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.wifi-bg-video-lowposter {
+	animation: wifi-11 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+}
+
 .wifi-scroll::-webkit-scrollbar {
 	width: 5px;
 }
-
 /*正常情况下滑块的样式*/
 .wifi-scroll::-webkit-scrollbar-thumb {
 	background-color: #9a0000;
