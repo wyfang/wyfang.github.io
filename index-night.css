@@ -51,7 +51,7 @@ a:active {
  filter: invert(100%) opacity(90%);
 }
 }
-.wifi-face img {
+.wifi-face-wifi img {
 	animation: wifi-3 2s;
 	animation-fill-mode: forwards;
 }
