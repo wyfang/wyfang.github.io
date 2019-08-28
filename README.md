@@ -8,4 +8,4 @@ Beautiful icon color patch loading process for bad network environments. A small
 
 They are using (Please let me know in any way to add your link)：
 
-https://zhujingyu.com/  https://tediorelee.cn/ 
+https://zhujingyu.com/
