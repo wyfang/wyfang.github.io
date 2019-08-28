@@ -119,8 +119,16 @@ a:active {
 	justify-content: center;
 	padding-top: 100px;
 }
+/* 使用 wifi-face 夜间将不会反色 */
 
-.wifi-face img {
+.wifi-face-wifi {
+	display: flex;
+	justify-content: center;
+	padding-top: 100px;
+}
+/* 使用 wifi-face-wifi 夜间将会反色 */
+
+.wifi-face img,.wifi-face-wifi img {
 	width: 88px;
 	height: 88px;
 }
