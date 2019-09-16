@@ -220,7 +220,7 @@ a:active {
 	line-height: 33px;
 	font-weight: 300;
 	background: #ffffff00;
-	backdrop-filter: blur(5px);
+	backdrop-filter: saturate(180%) blur(20px);
 	border-width: 1px;
 	border-style: solid;
 	border-color: #e2e2e2;
