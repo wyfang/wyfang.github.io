@@ -150,7 +150,6 @@ a:active {
 	letter-spacing: 0.47px;
 	animation: wifi-8 2s;
 	animation-fill-mode: forwards;
-	background: #00000078;
 }
  @keyframes wifi-9 {
  from {
