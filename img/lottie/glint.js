@@ -1,7 +1,9 @@
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById('glint'),
-  renderer: 'svg',
-  loop: false,
-  autoplay: true,
-  path: 'img/lottie/glint.json'
-})
+setTimeout(() => {
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById('glint'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: 'img/lottie/glint.json'
+  })
+}, 5000)
