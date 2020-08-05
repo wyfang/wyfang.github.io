@@ -123,7 +123,9 @@ a:active {
 .wifi-face-wifi {
 	display: flex;
 	justify-content: center;
-	padding-top: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 100px;
 }
 /* 使用 wifi-face-wifi 夜间将会反色 */
 
