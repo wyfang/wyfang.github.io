@@ -231,8 +231,6 @@ a:active {
 	padding: 0 15px;
 	margin: 10px;
 	font-family: sans-serif;
-	transition: background 0.4s, border 0.4s, color 0.4s;
-	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-text-qr {
@@ -347,7 +345,7 @@ a:active {
 	align-content: center;
 	max-width: 1250px;
 	display: flex;
-	margin: 0 auto;
+	margin: 0 auto 25px;
 }
 
 .wifi-url1 {
