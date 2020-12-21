@@ -27,10 +27,6 @@
 	animation: wifi-2 2s;
 	animation-fill-mode: forwards;
 }
-.wifi-foot {
-	display: flex;
-	flex-direction: column;
-}
 a:link {
 	color: #bdbdbd;
 }
@@ -110,18 +106,6 @@ a:active {
 }
 }
 .wifi-text {
-	display: flex;
-	font-size: 16px;
-	letter-spacing: 0.78px;
-	text-align: center;
-	line-height: 33px;
-	font-weight: 300;
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 7px;
-	padding: 0 15px;
-	margin: 10px;
-	font-family: sans-serif;
 	transition: background 0.4s, border 0.4s, color 0.4s;
 	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 	animation: wifi-6 2s;
@@ -178,14 +162,6 @@ a:active {
 .wifi-beian-a:active {
 	animation: wifi-9 2s;
 	animation-fill-mode: forwards;
-}
-.wifi-beians {
-	justify-content: center;
-	flex-wrap: wrap;
-	align-content: center;
-	max-width: 1250px;
-	display: flex;
-	margin: 0 auto;
 }
  @keyframes wifi-7 {
  from {
