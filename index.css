@@ -123,24 +123,24 @@ a:active {
 .wifi-face-wifi {
 	display: flex;
 	justify-content: center;
-    margin: 0 auto;
-    cursor: pointer;
-    margin-top: 100px;
-    width: 88px;
+    	margin: 0 auto;
+    	cursor: pointer;
+    	margin-top: 100px;
+    	width: 88px;
 }
 /* 使用 wifi-face-wifi 夜间将会反色 */
 
 .wifi-face img,.wifi-face-wifi img {
 	width: 88px;
 	height: 88px;
+	transition: opacity 0.4s;
+	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
-.wifi-txt {
-	display: flex;
-	justify-content: center;
-	margin: 30px 0;
-	height: 93px;
+.wifi-face img,.wifi-face-wifi img:hover {
+	opacity: 0.7;
 }
+
 
 .wifi-links {
 	display: flex;
