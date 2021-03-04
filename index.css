@@ -123,10 +123,10 @@ a:active {
 .wifi-face-wifi {
 	display: flex;
 	justify-content: center;
-    	margin: 0 auto;
-    	cursor: pointer;
-    	margin-top: 100px;
-    	width: 88px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 100px;
+    width: 88px;
 }
 /* 使用 wifi-face-wifi 夜间将会反色 */
 
@@ -140,7 +140,6 @@ a:active {
 .wifi-face img,.wifi-face-wifi img:hover {
 	opacity: 0.7;
 }
-
 
 .wifi-links {
 	display: flex;
