@@ -231,6 +231,8 @@ a:active {
 	padding: 0 15px;
 	margin: 10px;
 	font-family: sans-serif;
+	-webkit-appearance: none;
+	appearance: none;
 }
 
 .wifi-text-qr {
