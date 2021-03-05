@@ -141,6 +141,13 @@ a:active {
 	opacity: 0.7;
 }
 
+.wifi-txt {
+	display: flex;
+	justify-content: center;
+	margin: 30px 0;
+	height: 93px;
+}
+
 .wifi-links {
 	display: flex;
 	margin: 0 auto;
