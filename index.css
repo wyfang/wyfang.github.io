@@ -137,7 +137,7 @@ a:active {
 	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
-.wifi-face img,.wifi-face-wifi img:hover {
+.wifi-face img:hover,.wifi-face-wifi img:hover {
 	opacity: 0.7;
 }
 
