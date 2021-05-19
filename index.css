@@ -354,7 +354,7 @@ a:active {
 	align-content: center;
 	max-width: 1250px;
 	display: flex;
-	margin: 0 25px 25px 25px;
+	margin: 0 auto 25px;
 }
 
 .wifi-url1 {
