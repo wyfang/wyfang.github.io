@@ -81,6 +81,7 @@ body {
 
 .wifi-body {
 	box-sizing: border-box;
+	margin: 0 20px;
 }
 
 .wifi-content {
@@ -212,12 +213,12 @@ a:active {
 
 .wifi-other {
 	display: flex;
-	margin: 0 auto;
 	justify-content: center;
 	flex-wrap: wrap;
 	align-content: stretch;
 	max-width: 960px;
 	min-width: 300px;
+	margin: 0 auto;
 }
 
 .wifi-text {
@@ -353,7 +354,7 @@ a:active {
 	align-content: center;
 	max-width: 1250px;
 	display: flex;
-	margin: 0 auto 25px;
+	margin: 0 25px 25px 25px;
 }
 
 .wifi-url1 {
