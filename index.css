@@ -123,10 +123,10 @@ a:active {
 .wifi-face-wifi {
 	display: flex;
 	justify-content: center;
-    	margin: 0 auto;
-    	cursor: pointer;
-    	margin-top: 100px;
-   	width: 88px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 100px;
+    width: 88px;
 }
 /* 使用 wifi-face-wifi 夜间将会反色 */
 
@@ -221,7 +221,7 @@ a:active {
 }
 
 .wifi-text {
-	display: flex;
+    display: -webkit-box;
 	font-size: 16px;
 	color: #3e3e3e;
 	letter-spacing: 0.78px;
@@ -357,9 +357,10 @@ a:active {
 }
 
 .wifi-url1 {
-	height: 17px;
-	margin-top: 8px;
-	margin-right: 8px;
+    height: 17px;
+    margin-right: 8px;
+    top: 3px;
+    position: relative;
 }
 
 .wifi-url2 {
