@@ -289,6 +289,14 @@ a:active {
 	color: #ffffff;
 }
 
+.wifi-text img{
+	filter: brightness(0.7);
+}
+
+.wifi-text:hover img{
+	filter: brightness(1);
+}
+
 .wifi-text-qr:hover .wifi-qr {
 	opacity: 1;
 	top: 28px;
