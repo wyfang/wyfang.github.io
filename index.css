@@ -186,7 +186,7 @@ a:active {
 .wifi-link {
 	position: relative;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	text-align: center;
 	margin: 30px 18px 5px;
 	width: 75px;
