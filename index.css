@@ -1,368 +1,375 @@
 /*---Lottie---*/
 #glint {
-	width: 160px;
-	height: 160px;
-	position: absolute;
-	z-index: 2;
-	left: -46px;
-	top: -40px;
-	pointer-events: none;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    z-index: 2;
+    left: -46px;
+    top: -40px;
+    pointer-events: none;
 }
 
 #luckincoffee {
-	height: 22px;
-	width: 22px;
-	margin-top: 4px;
-	margin-right: 7px;
+    height: 22px;
+    width: 22px;
+    margin-top: 4px;
+    margin-right: 7px;
 }
 
 /*---Lottie---*/
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: Arial, Helvetica, sans-serif;
-	word-break: break-all;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    word-break: break-all;
 }
 
 html {
-	height: 100%;
+    height: 100%;
 }
 
 body {
-	min-width: 300px;
-	height: 100%;
+    min-width: 300px;
+    height: 100%;
 }
 
 .wifi-bg {
-	width: 150%;
-	height: 150%;
-	position: fixed;
-	top: -10%;
-	z-index: -100;
-	background: #ffffff00;
+    width: 150%;
+    height: 150%;
+    position: fixed;
+    top: -10%;
+    z-index: -100;
+    background: #ffffff00;
 }
 
 .wifi-bg-img {
-	width: 100%;
-	height: 100%;
-	filter: opacity(10%) blur(10px);
+    width: 100%;
+    height: 100%;
+    filter: opacity(10%) blur(10px);
+    background-image: url(/img/bg.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .wifi-bg-v {
-	width: 100%;
-	min-width: 1040px;
-	/*视频背景最小宽度*/
-	height: 100%;
-	margin: 0 auto;
-	position: fixed;
-	z-index: -100;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	opacity: 1;
+    width: 100%;
+    min-width: 1040px;
+    /*视频背景最小宽度*/
+    height: 100%;
+    margin: 0 auto;
+    position: fixed;
+    z-index: -100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
 }
 
 .wifi-bg-video {
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-	max-width: 1920px;
-	position: relative;
-	z-index: -101;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    position: relative;
+    z-index: -101;
 }
 
 .wifi-bg-videomark {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
 }
 
 .wifi-body {
-	box-sizing: border-box;
-	margin: 0 20px;
+    box-sizing: border-box;
+    margin: 0 20px;
 }
 
 .wifi-content {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .wifi-foot {
-	margin-bottom: 20px;
-	display: flex;
-	flex-direction: column;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 a:link {
-	color: #cccccc;
+    color: #cccccc;
 }
 
 a:visited {
-	color: #cccccc;
+    color: #cccccc;
 }
 
 a:hover {
-	color: #cccccc;
+    color: #cccccc;
 }
 
 a:active {
-	color: #cccccc;
+    color: #cccccc;
 }
 
 .wifi-face {
-	display: flex;
-	justify-content: center;
-	padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
 }
+
 /* 使用 wifi-face 夜间将不会反色 */
 
 .wifi-face-wifi {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     cursor: pointer;
     margin-top: 100px;
     width: 88px;
 }
+
 /* 使用 wifi-face-wifi 夜间将会反色 */
 
-.wifi-face img,.wifi-face-wifi img {
-	width: 88px;
-	height: 88px;
-	transition: opacity 0.4s;
-	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
+.wifi-face img,
+.wifi-face-wifi img {
+    width: 88px;
+    height: 88px;
+    transition: opacity 0.4s;
+    transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
-.wifi-face img:hover,.wifi-face-wifi img:hover {
-	opacity: 0.7;
+.wifi-face img:hover,
+.wifi-face-wifi img:hover {
+    opacity: 0.7;
 }
 
 .wifi-txt {
-	display: flex;
-	justify-content: center;
-	margin: 30px 0;
-	height: 93px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    height: 93px;
 }
 
 .wifi-links {
-	display: flex;
-	margin: 0 auto;
-	justify-content: center;
-	flex-wrap: wrap;
-	align-content: stretch;
-	font-size: 15px;
-	color: #4F4F4F;
-	letter-spacing: 0.78px;
-	max-width: 750px;
-	min-width: 300px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+    font-size: 15px;
+    color: #4F4F4F;
+    letter-spacing: 0.78px;
+    max-width: 750px;
+    min-width: 300px;
 }
 
 .wifi-link-img {
-	position: relative;
-	width: 70px;
-	height: 70px;
+    position: relative;
+    width: 70px;
+    height: 70px;
 }
 
 .wifi-linkloading {
-	position: absolute;
-	width: 70px;
-	height: 70px;
-	background: #F4F4F4;
-	border-radius: 50%;
-	top: 0;
-	z-index: -2;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #F4F4F4;
+    border-radius: 50%;
+    top: 0;
+    z-index: -2;
 }
 
 .linktxt {
-	margin-top: 5px;
-	color: #3e3e3e;
+    margin-top: 5px;
+    color: #3e3e3e;
 }
 
 .wifi-link {
-	position: relative;
-	display: flex;
-	align-items: flex-start;
-	text-align: center;
-	margin: 30px 18px 5px;
-	width: 75px;
-	opacity: 1;
-	transition: opacity 0.4s;
-	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    margin: 30px 18px 5px;
+    width: 75px;
+    opacity: 1;
+    transition: opacity 0.4s;
+    transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-link img {
-	width: 70px;
-	height: 70px;
+    width: 70px;
+    height: 70px;
 }
 
 .wifi-link:hover {
-	opacity: 0.5;
+    opacity: 0.5;
 }
 
 .wifi-line {
-	display: flex;
-	background: #efefef;
-	height: 1px;
-	margin: 25px;
+    display: flex;
+    background: #efefef;
+    height: 1px;
+    margin: 25px;
 }
 
 .wifi-other {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	align-content: stretch;
-	max-width: 960px;
-	min-width: 300px;
-	margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+    max-width: 960px;
+    min-width: 300px;
+    margin: 0 auto;
 }
 
 .wifi-text {
     display: -webkit-box;
-	font-size: 16px;
-	color: #3e3e3e;
-	letter-spacing: 0.78px;
-	text-align: center;
-	line-height: 33px;
-	font-weight: 300;
-	background: #ffffff00;
-	/* backdrop-filter: saturate(180%) blur(20px); */
-	border-width: 1px;
-	border-style: solid;
-	border-color: #e2e2e2;
-	border-radius: 7px;
-	padding: 0 15px;
-	margin: 10px;
-	font-family: sans-serif;
-	-webkit-appearance: none;
-	appearance: none;
+    font-size: 16px;
+    color: #3e3e3e;
+    letter-spacing: 0.78px;
+    text-align: center;
+    line-height: 33px;
+    font-weight: 300;
+    background: #ffffff00;
+    /* backdrop-filter: saturate(180%) blur(20px); */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e2e2e2;
+    border-radius: 7px;
+    padding: 0 15px;
+    margin: 10px;
+    font-family: sans-serif;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .wifi-text-qr {
-	position: relative;
+    position: relative;
 }
 
 .wifi-qr {
-	position: absolute;
-	z-index: 1;
-	top: 56px;
-	left: 50%;
-	margin-top: -196px;
-	margin-left: -79px;
-	background: #FFFFFF;
-	box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.24);
-	border-radius: 17px;
-	width: 158px;
-	height: 158px;
-	opacity: 0;
-	transform: scale(0.9);
-	transition: all 0.15s;
-	transition-timing-function: ease-in-out;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 56px;
+    left: 50%;
+    margin-top: -196px;
+    margin-left: -79px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 17px;
+    width: 158px;
+    height: 158px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.15s;
+    transition-timing-function: ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
 }
 
 .wifi-qr img {
-	width: 140px;
-	height: 140px;
-	pointer-events: none;
+    width: 140px;
+    height: 140px;
+    pointer-events: none;
 }
 
 .wifi-qr div {
-	width: 10px;
-	height: 10px;
-	background-color: white;
-	position: absolute;
-	bottom: -5px;
-	transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    transform: rotate(45deg);
 }
 
 .wifi-text:hover {
-	background: #000000;
-	border: 1px solid #000000;
-	color: #ffffff;
+    background: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
 }
 
-.wifi-text img{
-	filter: brightness(0.7);
+.wifi-text img {
+    filter: brightness(0.7);
 }
 
-.wifi-text:hover img{
-	filter: brightness(1);
+.wifi-text:hover img {
+    filter: brightness(1);
 }
 
 .wifi-text-qr:hover .wifi-qr {
-	opacity: 1;
-	top: 28px;
-	left: 50%;
-	transform: scale(1);
+    opacity: 1;
+    top: 28px;
+    left: 50%;
+    transform: scale(1);
 }
 
 .wifi-foot-links {
-	margin: 0 auto 10px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .wifi-foot-link {
-	margin: 5px 10px;
-	padding: 0 8px;
-	word-break: normal;
-	height: 15px;
-	border: 1px solid #efefef;
-	border-radius: 4px;
-	font-size: 9px;
-	color: #cccccc;
-	text-align: center;
-	line-height: 14px;
-	letter-spacing: 0.47px;
+    margin: 5px 10px;
+    padding: 0 8px;
+    word-break: normal;
+    height: 15px;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    font-size: 9px;
+    color: #cccccc;
+    text-align: center;
+    line-height: 14px;
+    letter-spacing: 0.47px;
 }
 
 .wifi-copyright,
 .wifi-beian {
-	font-size: 11px;
-	color: #cccccc;
-	text-align: center;
-	line-height: 18px;
-	letter-spacing: 0.47px;
-	margin: 6px 20px 0px 20px;
+    font-size: 11px;
+    color: #cccccc;
+    text-align: center;
+    line-height: 18px;
+    letter-spacing: 0.47px;
+    margin: 6px 20px 0px 20px;
 }
 
 .wifi-beian {
-	margin: 10px 5px 0px 5px;
-	line-height: 12px;
+    margin: 10px 5px 0px 5px;
+    line-height: 12px;
 }
 
 .wifi-beian-a:link {
-	color: #cccccc;
+    color: #cccccc;
 }
 
 .wifi-beian-a:visited {
-	color: #cccccc;
+    color: #cccccc;
 }
 
 .wifi-beian-a:hover {
-	color: #cccccc;
+    color: #cccccc;
 }
 
 .wifi-beian-a:active {
-	color: #cccccc;
+    color: #cccccc;
 }
 
 .wifi-beians {
-	justify-content: center;
-	flex-wrap: wrap;
-	align-content: center;
-	max-width: 1250px;
-	display: flex;
-	margin: 0 auto 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 1250px;
+    display: flex;
+    margin: 0 auto 25px;
 }
 
 .wifi-url1 {
@@ -373,85 +380,86 @@ a:active {
 }
 
 .wifi-url2 {
-	height: 17px;
-	margin-top: 8px;
-	margin-left: 8px;
+    height: 17px;
+    margin-top: 8px;
+    margin-left: 8px;
 }
 
 .wifi-bg-v video {
-	width: 100%;
-	margin: 0 auto;
-	z-index: -103;
-	opacity: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: -103;
+    opacity: 0;
 }
 
 .wifi-bg-video-lowposter {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	z-index: -104;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -104;
 }
 
 .wifi-bg-video-lowposter img {
-	width: 100%;
-	filter: blur(10px);
+    width: 100%;
+    filter: blur(10px);
 }
 
 @keyframes wifi-10 {
-	from {
-		opacity: 0;
-	}
+    from {
+        opacity: 0;
+    }
 
-	to {
-		opacity: 1;
-	}
+    to {
+        opacity: 1;
+    }
 }
 
 .wifi-bg-v video {
-	animation: wifi-10 2s;
-	animation-fill-mode: forwards;
-	animation-delay: 2s;
+    animation: wifi-10 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
 @keyframes wifi-11 {
-	from {
-		opacity: 1;
-	}
+    from {
+        opacity: 1;
+    }
 
-	to {
-		opacity: 0;
-	}
+    to {
+        opacity: 0;
+    }
 }
 
 .wifi-bg-video-lowposter {
-	animation: wifi-11 2s;
-	animation-fill-mode: forwards;
-	animation-delay: 2s;
+    animation: wifi-11 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
 .wifi-scroll::-webkit-scrollbar {
-	width: 5px;
+    width: 5px;
 }
+
 /*正常情况下滑块的样式*/
 .wifi-scroll::-webkit-scrollbar-thumb {
-	background-color: #9a0000;
-	border-radius: 10px;
+    background-color: #9a0000;
+    border-radius: 10px;
 }
 
 
 /*鼠标悬浮在滑块上时滑块的样式*/
 .wifi-scroll::-webkit-scrollbar-thumb:hover {
-	background-color: #9a0000;
+    background-color: #9a0000;
 }
 
 /*正常时候的主干部分*/
 .wifi-scroll::-webkit-scrollbar-track {
-	border-radius: 10px;
-	background-color: #000000e3;
+    border-radius: 10px;
+    background-color: #000000e3;
 }
 
 /*鼠标悬浮在滚动条上的主干部分*/
 .wifi-scroll::-webkit-scrollbar-track:hover {
-	background-color: #000000e3;
+    background-color: #000000e3;
 }
