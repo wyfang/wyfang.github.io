@@ -170,14 +170,10 @@ a:active {
 
 .wifi-link-img {
     position: relative;
-    width: 70px;
-    height: 70px;
 }
 
 .wifi-linkloading {
     position: absolute;
-    width: 70px;
-    height: 70px;
     background: #F4F4F4;
     border-radius: 50%;
     top: 0;
@@ -185,6 +181,7 @@ a:active {
 }
 
 .linktxt {
+    width: 100px;
     margin-top: 5px;
     color: #3e3e3e;
 }
@@ -194,11 +191,12 @@ a:active {
     display: flex;
     align-items: flex-start;
     text-align: center;
-    margin: 30px 18px 5px;
-    width: 75px;
+    margin: 15px 18px 15px;
+    width: 70px;
     opacity: 1;
     transition: opacity 0.4s;
     transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
+    justify-content: center;
 }
 
 .wifi-link img {
