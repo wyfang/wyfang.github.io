@@ -23,7 +23,7 @@
 	opacity: 0.95;
 }
 }
-.wifi-bg {
+.wifi-bg-mask {
 	animation: wifi-1-mask 2s;
 	animation-fill-mode: forwards;
 }
@@ -67,9 +67,7 @@ a:active {
 	animation: wifi-3 2s;
 	animation-fill-mode: forwards;
 }
-.wifi-link-img {
-	height: 70px;
-}
+
  @keyframes wifi-4 {
  from {
  color: #000000bd;
@@ -116,18 +114,18 @@ a:active {
  border-color: #ffffffad;
 }
  to {
- color: #cacaca;
- background: #00000078;
- border-color: #5d5d5d00;
+ color: #ffffffa3;
+ background: #00000052;
+ border-color: #0000002e;
 }
 }
 .wifi-text {
 	transition: background 0.4s, border 0.4s, color 0.4s;
 	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 	animation: wifi-6 2s;
-	color: #cacaca;
-	background: #00000078;
-	border-color: #5d5d5d00;
+	color: #ffffffa3;
+	background: #00000052;
+	border-color: #0000002e;
 }
  @keyframes wifi-8 {
  from {
