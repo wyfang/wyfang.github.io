@@ -166,6 +166,7 @@ a:active {
     letter-spacing: 0.78px;
     max-width: 750px;
     min-width: 300px;
+    padding-top: 32px;
 }
 
 .wifi-link-img {
@@ -181,9 +182,9 @@ a:active {
 }
 
 .linktxt {
-    width: 100px;
-    margin-top: 5px;
-    color: #3e3e3e;
+     width: 92px; 
+     margin-top: 5px; 
+     color: #3e3e3e; 
 }
 
 .wifi-link {
@@ -197,6 +198,13 @@ a:active {
     transition: opacity 0.4s;
     transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
     justify-content: center;
+}
+
+.wifi-link a {
+width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .wifi-link img {
@@ -232,7 +240,7 @@ a:active {
     color: #3e3e3e;
     letter-spacing: 0.78px;
     text-align: center;
-    line-height: 33px;
+    line-height: 20px;
     font-weight: 300;
     background: #ffffff00;
     /* backdrop-filter: saturate(180%) blur(20px); */
@@ -240,8 +248,8 @@ a:active {
     border-style: solid;
     border-color: #e2e2e2;
     border-radius: 7px;
-    padding: 0 15px;
-    margin: 10px;
+    padding: 6px 12px;
+    margin: 9px;
     font-family: sans-serif;
     -webkit-appearance: none;
     appearance: none;
