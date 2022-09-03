@@ -104,19 +104,19 @@ a {
 }
 
 a:link {
-    color: #cccccc;
+    color: #0000005c;
 }
 
 a:visited {
-    color: #cccccc;
+    color: #0000005c;
 }
 
 a:hover {
-    color: #cccccc;
+    color: #0000005c;
 }
 
 a:active {
-    color: #cccccc;
+    color: #0000005c;
 }
 
 .wifi-face {
@@ -186,7 +186,7 @@ a:active {
 .linktxt {
     width: 92px;
     margin-top: 5px;
-    color: #3e3e3e;
+    color: #000000bd;
     font-weight: 600;
 }
 
@@ -221,7 +221,7 @@ a:active {
 
 .wifi-line {
     display: flex;
-    background: #efefef;
+    background: #00000017;
     height: 1px;
     margin: 25px;
 }
@@ -241,20 +241,21 @@ a:active {
     align-items: center;
     font-size: 16px;
     font-weight: 400;
-    color: #3e3e3e;
+    color: #000000bd;
     letter-spacing: 0.78px;
     text-align: center;
     line-height: 20px;
-    background: #ffffff00;
+    background: #ffffffad;
     /* backdrop-filter: saturate(180%) blur(20px); */
     border-width: 1px;
     border-style: solid;
-    border-color: #e2e2e2;
+    border-color: #ffffffad;
     border-radius: 7px;
     padding: 6px 12px;
     margin: 9px;
     -webkit-appearance: none;
     appearance: none;
+    
 }
 
 .wifi-text-qr {
@@ -330,17 +331,17 @@ a:active {
     margin: 5px 10px;
     padding: 4px 12px;
     word-break: normal;
-    border: 1px solid #efefef;
+    border: 1px solid #00000017;
     border-radius: 395px;
     font-size: 12px;
-    color: #cccccc;
+    color: #0000005c;
     text-align: center;
 }
 
 .wifi-copyright,
 .wifi-beian {
     font-size: 11px;
-    color: #cccccc;
+    color: #0000005c;
     text-align: center;
     line-height: 18px;
     letter-spacing: 0.47px;
@@ -353,19 +354,19 @@ a:active {
 }
 
 .wifi-beian-a:link {
-    color: #cccccc;
+    color: #0000005c;
 }
 
 .wifi-beian-a:visited {
-    color: #cccccc;
+    color: #0000005c;
 }
 
 .wifi-beian-a:hover {
-    color: #cccccc;
+    color: #0000005c;
 }
 
 .wifi-beian-a:active {
-    color: #cccccc;
+    color: #0000005c;
 }
 
 .wifi-beians {
