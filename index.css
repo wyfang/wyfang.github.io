@@ -256,7 +256,8 @@ a:active {
     border-width: 1px;
     border-style: solid;
     border-color: #ffffffad;
-    border-radius: 7px;
+    /*border-radius: 7px;*/
+    border-radius: 88px;
     padding: 6px 12px;
     margin: 9px;
     -webkit-appearance: none;
