@@ -45,6 +45,10 @@ body {
     background: #ffffff00;
 }
 
+.wifi-bg-mask {
+    width: 150%;height: 150%;position: fixed;top: -10%;background: #ffffffd1;
+}
+
 .wifi-bg-img {
     width: 100%;
     height: 100%;
