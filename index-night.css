@@ -1,11 +1,9 @@
 @keyframes wifi-1 {
  from {
-	background: #ffffff00;;
-	opacity: 0;
+	background: #ffffff00;
 }
  to {
-	background: #000000;
-	opacity: 0.95;
+	background: #ffffff00;
 }
 }
 .wifi-bg {
@@ -15,12 +13,10 @@
 
 @keyframes wifi-1-mask {
  from {
-	background: #ffffffd1;;
-	opacity: 0;
+	background: #ffffffd1;
 }
  to {
-	background: #000000;
-	opacity: 0.95;
+	background: #000000d9;
 }
 }
 .wifi-bg-mask {
