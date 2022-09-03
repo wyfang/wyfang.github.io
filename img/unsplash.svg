@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
-    <title>编组</title>
-    <desc>Created with Sketch.</desc>
-    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="画板" transform="translate(-184.000000, -144.000000)" fill-rule="nonzero">
-            <g id="编组" transform="translate(184.000000, 144.000000)">
-                <circle id="path-1" fill="#EBEBEB" cx="100" cy="100" r="100"></circle>
-                <path d="M83,120 L118,120 L118,96 L143,96 L143,123 L143,144 L58,144 L58,124 L58,96 L83,96 L83,120 Z M83,57 L118,57 L118,81 L83,81 L83,57 Z" id="形状结合" fill="#000000"></path>
-            </g>
-        </g>
-    </g>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2_2)">
+<path d="M100 200C155.228 200 200 155.228 200 100C200 44.7715 155.228 0 100 0C44.7715 0 0 44.7715 0 100C0 155.228 44.7715 200 100 200Z" fill="white"/>
+<path d="M83 120H118V96H143V123V144H58V124V96H83V120ZM83 57H118V81H83V57Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_2_2">
+<rect width="200" height="200" fill="white"/>
+</clipPath>
+</defs>
 </svg>
