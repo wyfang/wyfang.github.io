@@ -56,7 +56,7 @@ a:active {
 }
  @keyframes wifi-4 {
  from {
- color: #3e3e3e;
+ color: #000000bd;
 }
  to {
  color: #bdbdbd;
@@ -83,7 +83,7 @@ a:active {
 }
  @keyframes wifi-5 {
  from {
- background: #efefef;
+ background: #00000017;
 }
  to {
  background: #424242;
@@ -95,9 +95,9 @@ a:active {
 }
  @keyframes wifi-6 {
  from {
- color: #3e3e3e;
- background: #ffffff00;
- border-color: #e2e2e2;
+ color: #000000bd;
+ background: #ffffffad;
+ border-color: #ffffffad;
 }
  to {
  color: #cacaca;
@@ -115,8 +115,8 @@ a:active {
 }
  @keyframes wifi-8 {
  from {
- border: 1px solid #efefef;
- color: #cccccc;
+ border: 1px solid #00000017;
+ color: #0000005c;
 }
  to {
 	border: 1px solid #4e4e4e;
@@ -137,7 +137,7 @@ a:active {
 }
  @keyframes wifi-9 {
  from {
- 	color: #cccccc;
+ 	color: #0000005c;
 }
  to {
 	color: #585858;
