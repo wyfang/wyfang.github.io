@@ -12,6 +12,22 @@
 	animation: wifi-1 2s;
 	animation-fill-mode: forwards;
 }
+
+@keyframes wifi-1-mask {
+ from {
+	background: #ffffffd1;;
+	opacity: 0;
+}
+ to {
+	background: #000000;
+	opacity: 0.95;
+}
+}
+.wifi-bg {
+	animation: wifi-1-mask 2s;
+	animation-fill-mode: forwards;
+}
+
 .wifi-bg-img {
 	filter: opacity(5%) blur(10px);
 }
@@ -124,14 +140,6 @@ a:active {
 }
 }
 .wifi-foot-link {
-	padding: 0 8px;
-	word-break: normal;
-	height: 15px;
-	border-radius: 4px;
-	font-size: 9px;
-	text-align: center;
-	line-height: 14px;
-	letter-spacing: 0.47px;
 	animation: wifi-8 2s;
 	animation-fill-mode: forwards;
 }
