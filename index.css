@@ -318,18 +318,22 @@ a:active {
 
 .wifi-text:hover,
 .wifi-text-qr-text:hover {
+    transition: 0.4s;
+    transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
     background: #000000;
     border: 1px solid #000000;
     color: #ffffff;
 }
 
-
-.wifi-text img {
-    filter: brightness(0.7);
+.wifi-text img,
+.wifi-text-qr-text img {
+    filter: brightness(0.5);
 }
 
-.wifi-text:hover img {
-    filter: brightness(1);
+.wifi-text:hover img,
+.wifi-text-qr-text:hover img {
+    transition: 0.4s;
+    filter: brightness(2);
 }
 
 .wifi-text-qr:hover .wifi-qr {
@@ -468,7 +472,6 @@ a:active {
     background-color: #9a0000;
     border-radius: 10px;
 }
-
 
 /*鼠标悬浮在滑块上时滑块的样式*/
 .wifi-scroll::-webkit-scrollbar-thumb:hover {
