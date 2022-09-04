@@ -143,12 +143,43 @@ a:active {
 
 .wifi-text,
 .wifi-text-qr-text {
-	transition: background 0.4s, border 0.4s, color 0.4s;
+	transition: 0.4s;
 	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
 	animation: wifi-6 2s;
 	color: #ffffffa3;
 	background: #00000052;
 	border-color: #0000002e;
+}
+
+.wifi-text:hover,
+.wifi-text-qr-text:hover {
+	transition: 0.4s;
+	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
+	background: #000000;
+	border: 1px solid #000000;
+	color: #ffffff;
+}
+
+@keyframes wifi-10 {
+	from {
+		filter: brightness(0.5);
+	}
+
+	to {
+		filter: brightness(0.7);
+	}
+}
+
+.wifi-text img,
+.wifi-text-qr-text img {
+	animation: wifi-10 2s;
+	filter: brightness(0.7);
+}
+
+.wifi-text:hover img,
+.wifi-text-qr-text:hover img {
+	transition: 0.4s;
+	filter: brightness(1);
 }
 
 @keyframes wifi-8 {
@@ -201,25 +232,5 @@ a:active {
 
 .wifi-beian-a:active {
 	animation: wifi-9 2s;
-	animation-fill-mode: forwards;
-}
-
-@keyframes wifi-7 {
-	from {
-		filter: brightness(100%);
-	}
-
-	to {
-		filter: brightness(55%);
-	}
-}
-
-.wifi-url1 {
-	animation: wifi-7 2s;
-	animation-fill-mode: forwards;
-}
-
-.wifi-url2 {
-	animation: wifi-7 2s;
 	animation-fill-mode: forwards;
 }
