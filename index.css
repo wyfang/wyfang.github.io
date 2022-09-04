@@ -46,7 +46,11 @@ body {
 }
 
 .wifi-bg-mask {
-    width: 150%;height: 150%;position: fixed;top: -10%;background: #ffffffd1;
+    width: 150%;
+    height: 150%;
+    position: fixed;
+    top: -10%;
+    background: #ffffffd1;
 }
 
 .wifi-bg-img {
@@ -242,7 +246,8 @@ a:active {
     margin: 0 auto;
 }
 
-.wifi-text {
+.wifi-text,
+.wifi-text-qr-text {
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -262,10 +267,15 @@ a:active {
     margin: 9px;
     -webkit-appearance: none;
     appearance: none;
-    
+}
+
+.wifi-text-qr-text {
+    margin: 0px;
 }
 
 .wifi-text-qr {
+    margin: 9px;
+    border-radius: 88px;
     position: relative;
 }
 
@@ -306,11 +316,13 @@ a:active {
     transform: rotate(45deg);
 }
 
-.wifi-text:hover {
+.wifi-text:hover,
+.wifi-text-qr-text:hover {
     background: #000000;
     border: 1px solid #000000;
     color: #ffffff;
 }
+
 
 .wifi-text img {
     filter: brightness(0.7);
