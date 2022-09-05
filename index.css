@@ -17,13 +17,11 @@
 
 /*---Lottie---*/
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lexend', 'Noto Sans SC', sans-serif, Arial, Helvetica;
+    font-family: sans-serif, Arial, Helvetica;
     word-break: break-all;
 }
 
@@ -194,10 +192,10 @@ a:active {
 }
 
 .linktxt {
-    width: 92px;
+    width: max-content;
     margin-top: 5px;
     color: #000000bd;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .wifi-link {
@@ -251,7 +249,7 @@ a:active {
     display: flex;
     align-items: center;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     color: #000000bd;
     letter-spacing: 0.78px;
     text-align: center;
@@ -357,13 +355,15 @@ a:active {
     border: 1px solid #00000017;
     border-radius: 395px;
     font-size: 12px;
+    font-weight: 300;
     color: #0000005c;
     text-align: center;
 }
 
 .wifi-copyright,
 .wifi-beian {
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 500;
     color: #0000005c;
     text-align: center;
     line-height: 18px;
