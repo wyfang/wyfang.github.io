@@ -1,9 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="62px" height="51px" viewBox="0 0 62 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>形状结合</title>
-    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="画板" transform="translate(-900.000000, -1857.000000)" fill="#DCDCDC">
-            <path d="M900,1857 L941,1908 L920.578544,1908 L900,1881.78947 L900,1857 Z M962,1857 L962,1882.2 L955.449704,1891 L935,1891 L962,1857 Z" id="形状结合"></path>
-        </g>
-    </g>
+<svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 1L14.8871 18H7.97015L1 9.26314V1ZM22 1V9.39998L19.7814 12.3333H12.8548L22 1Z" fill="#DCDCDC"/>
 </svg>
