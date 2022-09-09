@@ -252,19 +252,14 @@ a:active {
     font-weight: 300;
     color: #000000bd;
     letter-spacing: 0.78px;
-    text-align: center;
     line-height: 20px;
     background: #ffffffad;
-    /* backdrop-filter: saturate(180%) blur(20px); */
     border-width: 1px;
     border-style: solid;
     border-color: #ffffffad;
-    /*border-radius: 7px;*/
-    border-radius: 88px;
+    border-radius: 17px;
     padding: 6px 12px;
     margin: 9px;
-    -webkit-appearance: none;
-    appearance: none;
 }
 
 .wifi-text-qr-text {
