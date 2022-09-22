@@ -185,10 +185,11 @@ a:active {
     position: absolute;
     background: #F4F4F4;
     border-radius: 50%;
-    top: 0;
+    top: 0.5px;
+    left: 0.5px;
     z-index: -2;
-    width: 70px;
-    height: 70px;
+    width: 69px;
+    height: 69px;
 }
 
 .linktxt {
