@@ -1,58 +1,69 @@
-function toDouble(data) {
-	if (data < 10) {
-		return '0' + data;
-	} else {
-		return '' + data;
-	}
-}
+// 获取当前年份
+const currentYear = new Date().getFullYear();
 
-function secondToDate(second) {
-	if (!second) {
-		return 0;
-	}
-	var time = new Array(0, 0, 0, 0, 0);
-	if (second >= 365 * 24 * 3600) {
-		time[0] = parseInt(second / (365 * 24 * 3600));
-		second %= 365 * 24 * 3600;
-	}
-	if (second >= 24 * 3600) {
-		time[1] = parseInt(second / (24 * 3600));
-		second %= 24 * 3600;
-	}
-	if (second >= 3600) {
-		time[2] = parseInt(second / 3600);
-		second %= 3600;
-	}
-	if (second >= 60) {
-		time[3] = parseInt(second / 60);
-		second %= 60;
-	}
-	if (second > 0) {
-		time[4] = second;
-	}
-	return time;
-}
+// 获取版权声明的元素
+const copyrightElements = document.querySelectorAll('.wifi-copyright');
 
-function setTime() {
-	var create_time = Math.round(new Date(Date.UTC(2011, 09, 20, 11, 13, 32)).getTime() / 1000);
-	var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
-	currentTime = secondToDate((timestamp - create_time));
-	currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天' +
-		toDouble(currentTime[2]) + '时' + toDouble(currentTime[3]) + '分' + toDouble(currentTime[4]) +
-		'秒';
-	document.getElementById("htmer_time").innerHTML = currentTimeHtml;
-}
-setTime();
-setInterval(setTime, 1000);
+// 更新版权声明中的年份
+copyrightElements.forEach(function(element) {
+  element.innerHTML = element.innerHTML.replace('现在', currentYear);
+});
 
-function countDown() {
-    var nowtime = +new Date();
-    var inputTime = new Date('2112,08,27 11:13:32');
-    var times = (inputTime - nowtime) / 1000; //秒
-    var y = parseInt(times / 60 / 60 / 24 / 365);
-    y = y < 10 ? '0' + y : y;
+// 将常量定义在一个立即执行的函数表达式（IIFE）中，以避免污染全局命名空间
+(function() {
+    // 常量定义
+    const SECONDS_PER_MINUTE = 60;
+    const SECONDS_PER_HOUR = SECONDS_PER_MINUTE * 60;
+    const SECONDS_PER_DAY = SECONDS_PER_HOUR * 24;
+    const SECONDS_PER_YEAR = SECONDS_PER_DAY * 365;
 
-    return y + '年';
+    // 补零函数
+    function padZero(data) {
+        return data < 10 ? '0' + data : data.toString();
+    }
+
+    // 秒转换为时间数组
+    function convertSecondsToTimeUnits(seconds) {
+        let time = [0, 0, 0, 0, 0]; // 年，天，小时，分钟，秒
+        time[0] = Math.floor(seconds / SECONDS_PER_YEAR);
+        seconds -= time[0] * SECONDS_PER_YEAR;
+        time[1] = Math.floor(seconds / SECONDS_PER_DAY);
+        seconds -= time[1] * SECONDS_PER_DAY;
+        time[2] = Math.floor(seconds / SECONDS_PER_HOUR);
+        seconds -= time[2] * SECONDS_PER_HOUR;
+        time[3] = Math.floor(seconds / SECONDS_PER_MINUTE);
+        seconds -= time[3] * SECONDS_PER_MINUTE;
+        time[4] = seconds;
+        return time;
+    }
+
+    // 更新运行时间
+function updateElapsedTime() {
+    const createTime = new Date(Date.UTC(2011, 9, 20, 11, 13, 32)).getTime() / 1000;
+    const currentTimeInSeconds = Math.floor(Date.now() / 1000); // 取整到秒
+    const elapsedTimeInSeconds = currentTimeInSeconds - createTime;
+    const elapsedTime = convertSecondsToTimeUnits(elapsedTimeInSeconds);
+    const elapsedTimeHtml = `${elapsedTime[0]}年${elapsedTime[1]}天${padZero(elapsedTime[2])}时${padZero(elapsedTime[3])}分${padZero(elapsedTime[4])}秒`;
+    
+    const timeElement = document.getElementById("htmer_time");
+    if (timeElement) {
+        timeElement.textContent = elapsedTimeHtml;
+    }
 }
-var years = document.getElementById('htmer_time2');
-years.innerText = countDown();
+updateElapsedTime();
+setInterval(updateElapsedTime, 1000);
+
+    // 计算成为百年老站还需要的时间
+    function calculateYearsToCentenary() {
+        const now = new Date();
+        const centenaryDate = new Date('2112-08-27T11:13:32Z');
+        const timeToCentenaryInSeconds = (centenaryDate.getTime() - now.getTime()) / 1000;
+        const yearsToCentenary = Math.floor(timeToCentenaryInSeconds / SECONDS_PER_YEAR);
+        return padZero(yearsToCentenary) + '年';
+    }
+
+    const yearsElement = document.getElementById('htmer_time2');
+    if (yearsElement) {
+        yearsElement.textContent = calculateYearsToCentenary();
+    }
+})();
