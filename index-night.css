@@ -13,19 +13,12 @@
 	animation-fill-mode: forwards;
 }
 
-@keyframes wifi-1-mask {
-	from {
-		background: #ffffffd1;
-	}
-
-	to {
-		background: #000000d9;
-	}
+.wifi-bg-mask {
+    opacity: 0; /* 在夜间模式下消失 */
 }
 
-.wifi-bg-mask {
-	animation: wifi-1-mask 2s;
-	animation-fill-mode: forwards;
+.wifi-bg-mask-night {
+    opacity: 1; /* 在夜间模式下出现 */
 }
 
 .wifi-bg-img {
