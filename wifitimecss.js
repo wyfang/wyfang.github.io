@@ -12,11 +12,11 @@ window.onload = function () {
             setTimeout(function() {
                 themeColorMeta.setAttribute("content", "#080C0F");
             }, 1000);
-            darkModeToggle.textContent = "Light Mode";
+            darkModeToggle.textContent = "LIGHT MODE";
         } else {
             cssLink.setAttribute("href", "index.css");
             themeColorMeta.setAttribute("content", "#ECF1F3");
-            darkModeToggle.textContent = "Dark Mode";
+            darkModeToggle.textContent = "DARK MODE";
         }
     }
 
@@ -40,5 +40,5 @@ window.onload = function () {
     };
 
     // 检查时间并更新主题
-    setInterval(checkTimeAndUpdateTheme, 5000);
+    setInterval(checkTimeAndUpdateTheme, 1000);
 };
