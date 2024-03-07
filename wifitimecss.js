@@ -40,5 +40,5 @@ window.onload = function () {
     };
 
     // 检查时间并更新主题
-    setInterval(checkTimeAndUpdateTheme, 600000);
+    setInterval(checkTimeAndUpdateTheme, 5000);
 };
