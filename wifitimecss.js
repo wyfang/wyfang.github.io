@@ -1,44 +1,44 @@
-// window.onload = function () {
-//     var wifitimecss = new Date().getHours();
-//     var themeColorMeta = document.querySelector('meta[name="theme-color"]');
-    
-//     if (wifitimecss > 6 && wifitimecss < 18) {
-//         document.getElementById("wifitimecss").setAttribute("href", "/index.css");
-//         themeColorMeta.setAttribute("content", "#ECF1F3");
-//     } else {
-//         document.getElementById("wifitimecss").setAttribute("href", "/index-night.css?t=" + Date.now());
-//         setTimeout(function() {
-//             themeColorMeta.setAttribute("content", "#080C0F");
-//         }, 1000);
-//     }
-// }
-
 window.onload = function () {
-    var wifitimecss = new Date().getHours();
     var themeColorMeta = document.querySelector('meta[name="theme-color"]');
     var darkModeToggle = document.getElementById("darkModeToggle");
-    var isDarkMode = !(wifitimecss > 6 && wifitimecss < 18); // 初始暗色模式状态
-    // 设置初始主题
+    var isDarkMode = false; // 初始值设置为false
+    var userToggled = false; // 用户是否切换了主题
+
+    // 设置主题
     function setTheme(isDark) {
-        console.log('Setting theme. Dark mode:', isDark); // 调试输出
+        var cssLink = document.getElementById("wifitimecss");
         if (isDark) {
-            document.getElementById("wifitimecss").setAttribute("href", "index-night.css");
+            cssLink.setAttribute("href", "index-night.css");
             setTimeout(function() {
                 themeColorMeta.setAttribute("content", "#080C0F");
             }, 1000);
             darkModeToggle.textContent = "Light Mode";
         } else {
-            document.getElementById("wifitimecss").setAttribute("href", "index.css");
+            cssLink.setAttribute("href", "index.css");
             themeColorMeta.setAttribute("content", "#ECF1F3");
             darkModeToggle.textContent = "Dark Mode";
         }
     }
+
+    // 检查时间并更新主题
+    function checkTimeAndUpdateTheme() {
+        if (!userToggled) { // 只有当用户没有切换主题时才自动更新
+            var wifitimecss = new Date().getHours();
+            isDarkMode = !(wifitimecss > 6 && wifitimecss < 18);
+            setTheme(isDarkMode);
+        }
+    }
+
     // 初始化主题
-    setTheme(isDarkMode);
+    checkTimeAndUpdateTheme();
+
     // 点击切换模式
     darkModeToggle.onclick = function() {
-        console.log('Toggle clicked. Current dark mode:', isDarkMode); // 调试输出
         isDarkMode = !isDarkMode; // 切换模式
+        userToggled = true; // 用户已切换主题
         setTheme(isDarkMode);
     };
-}
+
+    // 每分钟检查一次时间并更新主题
+    setInterval(checkTimeAndUpdateTheme, 1000);
+};
