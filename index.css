@@ -25,29 +25,24 @@
     word-break: break-all;
 }
 
-html {
-    /*height: 100%;*/
-}
-
 body {
     min-width: 300px;
-    /*height: 100%;*/
 }
 
 .wifi-bg {
-    width: 100%;
+    width: 120%;
     height: 120%;
     position: fixed;
     top: -10%;
+    right: -10%;
     z-index: -100;
     background: #ffffff00;
 }
 
 .wifi-bg-mask, .wifi-bg-mask-night{
-    width: 100%;
+    width: 120%;
     height: 120%;
     position: fixed;
-    top: -10%;
 }
 
 .wifi-bg-mask{
@@ -57,6 +52,17 @@ body {
 .wifi-bg-mask-night {
     opacity: 0;
     background: linear-gradient(180deg, #080C0F 10%, rgba(8, 12, 15, 0.76) 32.56%, rgba(8, 12, 15, 0.76) 100%);
+}
+
+/* 媒体查询：屏幕宽度大于1024px时的样式 */
+@media screen and (min-width: 1024px) {
+    .wifi-bg-mask {
+        background: rgba(236, 241, 243, 0.70);
+    }
+
+    .wifi-bg-mask-night {
+        background: rgba(8, 12, 15, 0.76);
+    }
 }
 
 .wifi-bg-img {
