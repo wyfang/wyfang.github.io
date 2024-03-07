@@ -15,10 +15,12 @@
 
 .wifi-bg-mask {
     opacity: 0; /* 在夜间模式下消失 */
+	transition: opacity 2s ease-in-out;
 }
 
 .wifi-bg-mask-night {
     opacity: 1; /* 在夜间模式下出现 */
+	transition: opacity 2s ease-in-out;
 }
 
 .wifi-bg-img {
