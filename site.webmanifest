@@ -15,5 +15,5 @@
     ],
     "background_color": "#0E0E0E",
     "start_url": "https://www.wangyifang.com",
-    "display": "fullscreen"
+    "display": "standalone"
 }
