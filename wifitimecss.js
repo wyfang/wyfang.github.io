@@ -39,6 +39,6 @@ window.onload = function () {
         setTheme(isDarkMode);
     };
 
-    // 每分钟检查一次时间并更新主题
-    setInterval(checkTimeAndUpdateTheme, 1000);
+    // 检查时间并更新主题
+    setInterval(checkTimeAndUpdateTheme, 600000);
 };
