@@ -22,7 +22,7 @@ window.onload = function () {
     function setTheme(isDark) {
         console.log('Setting theme. Dark mode:', isDark); // 调试输出
         if (isDark) {
-            document.getElementById("wifitimecss").setAttribute("href", "index-night.css?t=" + Date.now());
+            document.getElementById("wifitimecss").setAttribute("href", "index-night.css");
             setTimeout(function() {
                 themeColorMeta.setAttribute("content", "#080C0F");
             }, 1000);
