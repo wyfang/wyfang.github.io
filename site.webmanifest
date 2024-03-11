@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "background_color": "#080C0F",
+    "background_color": "#ECF1F3",
     "start_url": "https://wangyifang.com",
     "display": "standalone"
 }
