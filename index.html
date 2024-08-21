@@ -298,7 +298,7 @@
                     VIP#5096093</div>
                 <div class="wifi-text" wificlick2copy="WANGYIFANG"><img class="wifi-url1" src="img/sm/origin.svg" alt="">Origin: WANGYIFANG</div>
                 <div class="wifi-text" wificlick2copy="WYFANG"><img class="wifi-url1" src="img/sm/uplay.svg" alt="">Uplay ID: WYFANG</div>
-                <div class="wifi-text" wificlick2copy="WANGYIFANG"><img class="wifi-url1" src="img/sm/epic.svg" alt="">Epic Games: WANGYIFANG</div>
+                <div class="wifi-text" wificlick2copy="CNCSGO"><img class="wifi-url1" src="img/sm/epic.svg" alt="">Epic Games: CNCSGO</div>
                 <div class="wifi-text" wificlick2copy="SW-5938-6842-7676"><img class="wifi-url1" src="img/sm/nsfc.svg" alt="">Nintendo Switch:
                     SW-5938-6842-7676</div>
                 <div class="wifi-text-qr">
@@ -389,9 +389,9 @@
                     Tech<img class="wifi-url2" src="img/sm/url.svg" alt=""></div>
                 <div class="wifi-text" onclick="window.open('https://paypal.me/dribbble')" style="cursor:pointer">
                     PayPal.Me<img class="wifi-url2" src="img/sm/url.svg" alt=""></div>
-                <div class="wifi-text" onclick="window.open('https://dl.todesk.com/windows/ToDesk_Lite.exe')"
-                    style="cursor:pointer">
-                    请Wi-Fi远程协助 (Todesk绿色版)<img class="wifi-url2" src="img/sm/url.svg" alt=""></div>
+                <!--<div class="wifi-text" onclick="window.open('https://dl.todesk.com/windows/ToDesk_Lite.exe')"-->
+                <!--    style="cursor:pointer">-->
+                <!--    请Wi-Fi远程协助 (Todesk绿色版)<img class="wifi-url2" src="img/sm/url.svg" alt=""></div>-->
             </div>
         </div>
         <div class="wifi-foot">
@@ -423,6 +423,93 @@
             <div class="wifi-copyright">本网站 ( ucfan.cn / wangyifang.com ) 已经稳定运行了: <span id="htmer_time"
                     style="font-family: 'DM Mono';font-weight: 500;"></span>，离成为百年老站还有<span id="htmer_time2"
                     style="font-family: 'DM Mono';font-weight: 500;"></span> | Hosted by Sunway TaihuLight</div>
+                    
+            <!--51.la统计-->
+            <div id="custom-widget" class="wifi-copyright" style="display: none;">
+                <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/KRC2Iq7JDebE74Fo/quote.js?theme=#000000,#000000,#000000,#000000,,#000000,12&f=12&display=0,1,1,1,1,1,1,1">
+                </script>
+            </div>
+            
+            <script>
+// widget-extract.js
+
+window.addEventListener('load', function () {
+    // 提取并替换小部件内容的函数
+    function extractAndReplaceWidgetContent() {
+        var widget = document.querySelector('#custom-widget .la-widget');
+        if (widget) {
+            var stats = {
+                '今日访问人数': '',
+                '今日访问量': '',
+                '昨日访问人数': '',
+                '昨日访问量': '',
+                '本月访问量': '',
+                '总访问量': ''
+            };
+
+            widget.querySelectorAll('span').forEach(function(span) {
+                var spanText = span.textContent.trim().replace(/\s+/g, ' '); // 去掉多余空格
+
+                // 匹配并提取统计信息
+                Object.keys(stats).forEach(function(key) {
+                    var regex = new RegExp(key + '\\s*(\\d+[\\,\\d]*)');
+                    var match = spanText.match(regex);
+                    if (match) {
+                        stats[key] = match[1];
+                    }
+                });
+            });
+
+            // 生成最终的文本内容，每个统计项之间添加两个不间断空格
+            var textContent = '';
+            Object.keys(stats).forEach(function(key) {
+                if (stats[key]) {
+                    textContent += key + stats[key] + '&nbsp;&nbsp;';
+                }
+            });
+
+            // 创建一个新的 div 元素替换原有小部件内容
+            var newContent = document.createElement('div');
+            newContent.innerHTML = textContent.trim(); // 去掉末尾多余的空格
+
+            // 替换原有小部件内容
+            var customWidget = document.getElementById('custom-widget');
+            customWidget.innerHTML = '';
+            customWidget.appendChild(newContent);
+        }
+    }
+
+    // 使用 MutationObserver 监控 la-widget 的加载状态
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.addedNodes.length > 0) {
+                mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeType === 1 && node.classList.contains('la-widget')) {
+                        // 小部件加载完成后提取并替换内容
+                        extractAndReplaceWidgetContent();
+                    }
+                });
+            }
+        });
+    });
+
+    // 监听整个文档的变化
+    observer.observe(document, { childList: true, subtree: true });
+
+    // 页面加载完成后直接执行一次提取操作
+    extractAndReplaceWidgetContent();
+
+    // 去除#custom-widget的display:none样式
+    var customWidget = document.getElementById('custom-widget');
+    if (customWidget) {
+        customWidget.style.display = '';
+    }
+});
+
+            </script>
+            
+            <!--51.la统计-->
+            
             <div class="wifi-beians">
                 <div class="wifi-beian"><a class="wifi-beian-a" href="http://beian.miit.gov.cn" target="_blank"
                         rel="noopener">浙ICP备16000063号-1</a></div>
