@@ -29,23 +29,7 @@
     <meta name="application-name" content="Wi-Fi">
     <meta name="msapplication-TileColor" content="#121212">
     <!-- ico -->
-    <!--Google fonts-->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
-        /*主字体font-family: 'Lexend', 'Noto Sans SC', sans-serif, Arial, Helvetica;*/
-        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-
-        /*等宽数字字体font-family: 'DM Mono'*/
-        * {
-            font-family: 'Lexend', 'Noto Sans SC', sans-serif, Arial, Helvetica;
-        }
-
-        .wifi-copyright span {
-            font-family: 'DM Mono', 'Lexend', 'Noto Sans SC', sans-serif, Arial, Helvetica;
-            font-weight: 500;
-        }
-    </style>
-    <!--Google fonts-->
+    <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
     <script src="/analytics.js"></script>
 </head>
 
@@ -420,9 +404,7 @@
                 <div id="darkModeToggle" class="wifi-foot-link" style="cursor: pointer;">⋅⋅⋅</div>
             </div>
             <div class="wifi-copyright">Copyright © 2011 - 现在 Wi-Fi. All Rights Reserved.</div>
-            <div class="wifi-copyright">本网站 ( ucfan.cn / wangyifang.com ) 已经稳定运行了: <span id="htmer_time"
-                    style="font-family: 'DM Mono';font-weight: 500;"></span>，离成为百年老站还有<span id="htmer_time2"
-                    style="font-family: 'DM Mono';font-weight: 500;"></span> | Hosted by Sunway TaihuLight</div>
+            <div class="wifi-copyright">本网站 ( ucfan.cn / wangyifang.com ) 已经稳定运行了: <span id="htmer_time"></span>，离成为百年老站还有<span id="htmer_time2"></span> | Hosted by Sunway TaihuLight</div>
                     
             <!--51.la统计-->
             <div id="custom-widget" class="wifi-copyright" style="display: none;">
