@@ -635,7 +635,7 @@ window.addEventListener('load', function () {
             position: fixed;
             bottom: 0px;
             left: 0px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+            /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%); */
         }
 
         /* 顶部渐变 */
@@ -645,7 +645,7 @@ window.addEventListener('load', function () {
             position: fixed;
             top: 0px;
             left: 0px;
-            background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+            /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%); */
         }
 
         /* 通用渐变模糊样式 */
@@ -653,7 +653,7 @@ window.addEventListener('load', function () {
             position: fixed;
             z-index: 5;
             inset: auto 0 0 0;
-            height: 90px;
+            height: 44px;
             pointer-events: none;
         }
         
@@ -746,7 +746,7 @@ window.addEventListener('load', function () {
 
         .gradient-blur > div:nth-of-type(3) {
             z-index: 4;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(3px);
             mask: linear-gradient(
                 to bottom,
                 rgba(0, 0, 0, 0) 37.5%,
@@ -768,7 +768,7 @@ window.addEventListener('load', function () {
 
         .gradient-blur > div:nth-of-type(4) {
             z-index: 5;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(4px);
             mask: linear-gradient(
                 to bottom,
                 rgba(0, 0, 0, 0) 50%,
@@ -790,7 +790,7 @@ window.addEventListener('load', function () {
 
         .gradient-blur > div:nth-of-type(5) {
             z-index: 6;
-            backdrop-filter: blur(16px);
+            backdrop-filter: blur(5px);
             mask: linear-gradient(
                 to bottom,
                 rgba(0, 0, 0, 0) 62.5%,
@@ -812,7 +812,7 @@ window.addEventListener('load', function () {
 
         .gradient-blur > div:nth-of-type(6) {
             z-index: 7;
-            backdrop-filter: blur(32px);
+            backdrop-filter: blur(6px);
             mask: linear-gradient(
                 to bottom,
                 rgba(0, 0, 0, 0) 75%,
