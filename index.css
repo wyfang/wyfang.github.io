@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'Mona Sans';
     src:
-      url('Mona-Sans.woff2') format('woff2 supports variations'),
-      url('Mona-Sans.woff2') format('woff2-variations');
+        url('Mona-Sans.woff2') format('woff2 supports variations'),
+        url('Mona-Sans.woff2') format('woff2-variations');
     font-weight: 200 900;
     font-stretch: 75% 125%;
-  }
-  
-  html {
+}
+
+html {
     font-family: 'Mona Sans';
-  }
+}
 
 /*---Lottie---*/
 #glint {
@@ -51,13 +51,14 @@ body {
     background: #ffffff00;
 }
 
-.wifi-bg-mask, .wifi-bg-mask-night{
+.wifi-bg-mask,
+.wifi-bg-mask-night {
     width: 120%;
     height: 120%;
     position: fixed;
 }
 
-.wifi-bg-mask{
+.wifi-bg-mask {
     background: linear-gradient(180deg, #ECF1F3 10%, rgba(236, 241, 243, 0.7) 29.56%);
 }
 
@@ -398,6 +399,13 @@ a:active {
     line-height: 12px;
 }
 
+.wifi-copyright .num {
+    display: inline-block;
+    text-align: center;
+    min-width: 16px;
+    /* 根据需要调整宽度 */
+}
+
 .wifi-beian-a:link {
     color: #0000005c;
 }
@@ -509,4 +517,4 @@ a:active {
 /*鼠标悬浮在滚动条上的主干部分*/
 .wifi-scroll::-webkit-scrollbar-track:hover {
     background-color: #ffffff00;
-} */
+}
