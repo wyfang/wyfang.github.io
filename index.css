@@ -11,6 +11,29 @@ html {
     font-family: 'Mona Sans';
 }
 
+/*---Mouse cursor---*/
+body {
+  cursor: url(img/wifi-cursor-default.svg) 3 4, auto;
+}
+
+p, span {
+  cursor: url(img/wifi-cursor-text.svg) 6 13, text;
+}
+
+a, button, .wifi-cursor-pointer, .wifi-face-wifi img, .wifi-foot-links {
+  cursor: url(img/wifi-cursor-pointer.svg) 9 4, pointer;
+}
+
+.no-select {
+  cursor: url(img/wifi-cursor-default.svg) 3 4, auto;
+  -webkit-user-select: none;  /* Safari/Chrome */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE/Edge */
+  user-select: none;          /* 标准写法 */
+}
+
+/*---Mouse cursor---*/
+
 /*---Lottie---*/
 #glint {
     width: 160px;
