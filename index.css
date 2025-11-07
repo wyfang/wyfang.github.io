@@ -308,6 +308,19 @@ a:active {
     margin: 9px;
 }
 
+.wifi-text a,
+.wifi-text-qr-text a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+.wifi-text:hover a,
+.wifi-text-qr-text:hover a {
+    color: #ffffff;
+}
+
 .wifi-text-qr-text {
     margin: 0px;
 }
