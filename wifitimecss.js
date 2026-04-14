@@ -1,44 +1,81 @@
-window.onload = function () {
-    var themeColorMeta = document.querySelector('meta[name="theme-color"]');
-    var darkModeToggle = document.getElementById("darkModeToggle");
-    var isDarkMode = false; // 初始值设置为false
-    var userToggled = false; // 用户是否切换了主题
+(function () {
+    var root = document.documentElement;
+    var darkModeToggle = null;
+    var isDarkMode = false;
+    var userToggled = false;
+    var transitionTimer = null;
+    var THEME_TRANSITION_MS = 2000;
 
-    // 设置主题
-    function setTheme(isDark) {
-        var cssLink = document.getElementById("wifitimecss");
-        if (isDark) {
-            cssLink.setAttribute("href", "index-night.css");
-            setTimeout(function() {
-                themeColorMeta.setAttribute("content", "#080C0F");
-            }, 1000);
-            darkModeToggle.textContent = "LIGHT MODE";
-        } else {
-            cssLink.setAttribute("href", "index.css");
-            themeColorMeta.setAttribute("content", "#ECF1F3");
-            darkModeToggle.textContent = "DARK MODE";
+    function getThemeColorMeta() {
+        return document.querySelector('meta[name="theme-color"]');
+    }
+
+    function getAutoDarkMode() {
+        var hour = new Date().getHours();
+        return !(hour > 6 && hour < 18);
+    }
+
+    function updateToggleText() {
+        if (darkModeToggle) {
+            darkModeToggle.textContent = isDarkMode ? "LIGHT MODE" : "DARK MODE";
         }
     }
 
-    // 检查时间并更新主题
+    function updateThemeColor() {
+        var themeColorMeta = getThemeColorMeta();
+        if (themeColorMeta) {
+            themeColorMeta.setAttribute("content", isDarkMode ? "#080C0F" : "#ECF1F3");
+        }
+    }
+
+    function setTheme(nextIsDark, shouldAnimate) {
+        var themeChanged = root.classList.contains("dark-mode") !== nextIsDark;
+
+        isDarkMode = nextIsDark;
+
+        if (themeChanged && shouldAnimate) {
+            root.classList.add("theme-transitioning");
+            window.clearTimeout(transitionTimer);
+            transitionTimer = window.setTimeout(function () {
+                root.classList.remove("theme-transitioning");
+            }, THEME_TRANSITION_MS);
+        }
+
+        root.classList.toggle("dark-mode", isDarkMode);
+        updateThemeColor();
+        updateToggleText();
+    }
+
     function checkTimeAndUpdateTheme() {
-        if (!userToggled) { // 只有当用户没有切换主题时才自动更新
-            var wifitimecss = new Date().getHours();
-            isDarkMode = !(wifitimecss > 6 && wifitimecss < 18);
-            setTheme(isDarkMode);
+        if (userToggled) {
+            return;
         }
+
+        var nextMode = getAutoDarkMode();
+        setTheme(nextMode, nextMode !== isDarkMode);
     }
 
-    // 初始化主题
-    checkTimeAndUpdateTheme();
+    function bindToggle() {
+        darkModeToggle = document.getElementById("darkModeToggle");
 
-    // 点击切换模式
-    darkModeToggle.onclick = function() {
-        isDarkMode = !isDarkMode; // 切换模式
-        userToggled = true; // 用户已切换主题
-        setTheme(isDarkMode);
-    };
+        if (darkModeToggle) {
+            darkModeToggle.onclick = function () {
+                userToggled = true;
+                setTheme(!isDarkMode, true);
+            };
+        }
 
-    // 检查时间并更新主题
-    setInterval(checkTimeAndUpdateTheme, 1000);
-};
+        setTheme(isDarkMode, false);
+    }
+
+    isDarkMode = getAutoDarkMode();
+    setTheme(isDarkMode, false);
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", bindToggle);
+    } else {
+        bindToggle();
+    }
+
+    window.setInterval(checkTimeAndUpdateTheme, 1000);
+})();

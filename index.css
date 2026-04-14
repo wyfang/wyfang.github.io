@@ -79,11 +79,17 @@ body {
     background: #ffffff00;
 }
 
+.wifi-bg,
+.wifi-bg * {
+    pointer-events: none;
+}
+
 .wifi-bg-mask,
 .wifi-bg-mask-night {
     width: 120%;
     height: 120%;
     position: fixed;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .wifi-bg-mask {
@@ -93,6 +99,36 @@ body {
 .wifi-bg-mask-night {
     opacity: 0;
     background: linear-gradient(180deg, #080C0F 10%, rgba(8, 12, 15, 0.76) 32.56%, rgba(8, 12, 15, 0.76) 100%);
+}
+
+html.theme-transitioning .wifi-bg-mask,
+html.theme-transitioning .wifi-bg-mask-night {
+    transition-duration: 2s;
+}
+
+html.theme-transitioning .wifi-txt img,
+html.theme-transitioning .wifi-face-wifi img,
+html.theme-transitioning .wifi-link img,
+html.theme-transitioning .wifi-text:not(:hover) img,
+html.theme-transitioning .wifi-text-qr:not(:hover) .wifi-text-qr-text img {
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+html.theme-transitioning .linktxt,
+html.theme-transitioning .wifi-text:not(:hover),
+html.theme-transitioning .wifi-text-qr:not(:hover) .wifi-text-qr-text,
+html.theme-transitioning .wifi-foot-link,
+html.theme-transitioning .wifi-copyright,
+html.theme-transitioning .wifi-beian,
+html.theme-transitioning .wifi-beian-a {
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+html.theme-transitioning .wifi-line {
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
 }
 
 /* 媒体查询：屏幕宽度大于1024px时的样式 */
@@ -198,8 +234,8 @@ a:active {
 .wifi-face-wifi img {
     width: 88px;
     height: 88px;
-    transition: opacity 0.4s;
-    transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
+    transition: opacity 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99),
+        filter 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-face img:hover,
@@ -247,6 +283,7 @@ a:active {
     margin-top: 5px;
     color: #000000bd;
     font-weight: 530;
+    transition: color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-link {
@@ -272,6 +309,7 @@ a:active {
 .wifi-link img {
     width: 70px;
     height: 70px;
+    transition: filter 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-link:hover {
@@ -283,6 +321,7 @@ a:active {
     background: #00000017;
     height: 1px;
     margin: 25px;
+    transition: background-color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-other {
@@ -311,6 +350,18 @@ a:active {
     border-radius: 17px;
     padding: 6px 12px;
     margin: 9px;
+    transition: color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99),
+        background-color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99),
+        border-color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
+}
+
+a.wifi-text:link,
+a.wifi-text:visited,
+a.wifi-text:active,
+a.wifi-text-qr-text:link,
+a.wifi-text-qr-text:visited,
+a.wifi-text-qr-text:active {
+    color: #000000bd;
 }
 
 .wifi-text a,
@@ -375,8 +426,6 @@ a:active {
 
 .wifi-text:hover,
 .wifi-text-qr-text:hover {
-    transition: 0.4s;
-    transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
     background: #000000;
     border: 1px solid #000000;
     color: #ffffff;
@@ -385,11 +434,11 @@ a:active {
 .wifi-text img,
 .wifi-text-qr-text img {
     filter: brightness(0.5);
+    transition: filter 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-text:hover img,
 .wifi-text-qr-text:hover img {
-    transition: 0.4s;
     filter: brightness(2);
 }
 
@@ -417,6 +466,9 @@ a:active {
     font-weight: 300;
     color: #0000005c;
     text-align: center;
+    transition: color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99),
+        background-color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99),
+        border-color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-copyright,
@@ -428,6 +480,7 @@ a:active {
     line-height: 18px;
     letter-spacing: 0.47px;
     margin: 6px 20px 0px 20px;
+    transition: color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-beian {
@@ -456,6 +509,10 @@ a:active {
 
 .wifi-beian-a:active {
     color: #0000005c;
+}
+
+.wifi-beian-a {
+    transition: color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-beians {
