@@ -1,231 +1,77 @@
-@keyframes wifi-1 {
-	from {
-		background: #ffffff00;
-	}
-
-	to {
-		background: #ffffff00;
-	}
+html.dark-mode .wifi-bg-mask {
+    opacity: 0;
 }
 
-.wifi-bg {
-	animation: wifi-1 2s;
-	animation-fill-mode: forwards;
+html.dark-mode .wifi-bg-mask-night {
+    opacity: 1;
 }
 
-.wifi-bg-mask {
-    opacity: 0; /* 在夜间模式下消失 */
-	transition: opacity 2s ease-in-out;
+html.dark-mode .wifi-txt img,
+html.dark-mode .wifi-face-wifi img {
+    filter: invert(100%) opacity(90%);
 }
 
-.wifi-bg-mask-night {
-    opacity: 1; /* 在夜间模式下出现 */
-	transition: opacity 2s ease-in-out;
+html.dark-mode .linktxt {
+    color: #bdbdbd;
 }
 
-.wifi-bg-img {
-	filter: opacity(5%) blur(10px);
+html.dark-mode .wifi-text a,
+html.dark-mode .wifi-text-qr-text a {
+    color: inherit;
 }
 
-@keyframes wifi-2 {
-	from {
-		filter: invert(0%) opacity(100%);
-	}
-
-	to {
-		filter: invert(100%) opacity(90%);
-	}
+html.dark-mode a.wifi-text:link,
+html.dark-mode a.wifi-text:visited,
+html.dark-mode a.wifi-text:active,
+html.dark-mode a.wifi-text-qr-text:link,
+html.dark-mode a.wifi-text-qr-text:visited,
+html.dark-mode a.wifi-text-qr-text:active {
+    color: #ffffffa3;
 }
 
-.wifi-txt img {
-	animation: wifi-2 2s;
-	animation-fill-mode: forwards;
+html.dark-mode .wifi-link img {
+    filter: brightness(90%);
 }
 
-a:link {
-	color: #bdbdbd;
+html.dark-mode .wifi-link:hover {
+    opacity: 0.8;
 }
 
-a:visited {
-	color: #bdbdbd;
+html.dark-mode .wifi-line {
+    background-color: #ffffff14;
 }
 
-a:hover {
-	color: #bdbdbd;
+html.dark-mode .wifi-text,
+html.dark-mode .wifi-text-qr-text {
+    color: #ffffffa3;
+    background: #00000052;
+    border-color: #0000002e;
 }
 
-a:active {
-	color: #bdbdbd;
+html.dark-mode .wifi-text:hover,
+html.dark-mode .wifi-text-qr-text:hover {
+    background: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
 }
 
-@keyframes wifi-3 {
-	from {
-		filter: invert(0%) opacity(100%);
-	}
-
-	to {
-		filter: invert(100%) opacity(90%);
-	}
+html.dark-mode .wifi-text img,
+html.dark-mode .wifi-text-qr-text img {
+    filter: brightness(0.7);
 }
 
-.wifi-face-wifi img {
-	animation: wifi-3 2s;
-	animation-fill-mode: forwards;
+html.dark-mode .wifi-text:hover img,
+html.dark-mode .wifi-text-qr-text:hover img {
+    filter: brightness(1);
 }
 
-@keyframes wifi-4 {
-	from {
-		color: #000000bd;
-	}
-
-	to {
-		color: #bdbdbd;
-	}
+html.dark-mode .wifi-foot-link {
+    border: 1px solid #ffffff14;
+    color: #ffffff38;
 }
 
-.linktxt {
-	animation: wifi-4 2s;
-	animation-fill-mode: forwards;
-}
-
-@keyframes wifi-9 {
-	from {
-		filter: brightness(100%);
-	}
-
-	to {
-		filter: brightness(90%);
-	}
-}
-
-.wifi-link img {
-	animation: wifi-9 2s;
-	animation-fill-mode: forwards;
-}
-
-.wifi-link:hover {
-	opacity: 0.8;
-}
-
-@keyframes wifi-5 {
-	from {
-		background: #00000017;
-	}
-
-	to {
-		background: #ffffff14;
-	}
-}
-
-.wifi-line {
-	animation: wifi-5 2s;
-	animation-fill-mode: forwards;
-}
-
-@keyframes wifi-6 {
-	from {
-		color: #000000bd;
-		background: #ffffffad;
-		border-color: #ffffffad;
-	}
-
-	to {
-		color: #ffffffa3;
-		background: #00000052;
-		border-color: #0000002e;
-	}
-}
-
-.wifi-text,
-.wifi-text-qr-text {
-	transition: 0.4s;
-	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
-	animation: wifi-6 2s;
-	color: #ffffffa3;
-	background: #00000052;
-	border-color: #0000002e;
-}
-
-.wifi-text:hover,
-.wifi-text-qr-text:hover {
-	transition: 0.4s;
-	transition-timing-function: cubic-bezier(0.08, 0.64, 0.41, 0.99);
-	background: #000000;
-	border: 1px solid #000000;
-	color: #ffffff;
-}
-
-@keyframes wifi-10 {
-	from {
-		filter: brightness(0.5);
-	}
-
-	to {
-		filter: brightness(0.7);
-	}
-}
-
-.wifi-text img,
-.wifi-text-qr-text img {
-	animation: wifi-10 2s;
-	filter: brightness(0.7);
-}
-
-.wifi-text:hover img,
-.wifi-text-qr-text:hover img {
-	transition: 0.4s;
-	filter: brightness(1);
-}
-
-@keyframes wifi-8 {
-	from {
-		border: 1px solid #00000017;
-		color: #0000005c;
-	}
-
-	to {
-		border: 1px solid #ffffff14;
-		color: #ffffff38;
-	}
-}
-
-.wifi-foot-link {
-	animation: wifi-8 2s;
-	animation-fill-mode: forwards;
-}
-
-@keyframes wifi-9 {
-	from {
-		color: #0000005c;
-	}
-
-	to {
-		color: #ffffff38;
-	}
-}
-
-.wifi-copyright,
-.wifi-beian {
-	animation: wifi-9 2s;
-	animation-fill-mode: forwards;
-}
-
-.wifi-beian-a:link {
-	animation: wifi-9 2s;
-	animation-fill-mode: forwards;
-}
-
-.wifi-beian-a:visited {
-	animation: wifi-9 2s;
-	animation-fill-mode: forwards;
-}
-
-.wifi-beian-a:hover {
-	animation: wifi-9 2s;
-	animation-fill-mode: forwards;
-}
-
-.wifi-beian-a:active {
-	animation: wifi-9 2s;
-	animation-fill-mode: forwards;
+html.dark-mode .wifi-copyright,
+html.dark-mode .wifi-beian,
+html.dark-mode .wifi-beian-a {
+    color: #ffffff38;
 }
