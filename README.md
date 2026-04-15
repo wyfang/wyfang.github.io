@@ -14,4 +14,4 @@ The code in this repository is licensed under Apache-2.0.
 
 Personal assets, branding materials, showcase content, and third-party resources are not automatically covered by that license.
 
-See `LICENSE`, `NOTICE`, and `LICENSE_SCOPE.md` for details.
+See [LICENSE](LICENSE), [NOTICE](NOTICE), and [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for details.
