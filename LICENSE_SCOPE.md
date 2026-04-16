@@ -1,4 +1,4 @@
-# License Scope / 许可范围说明
+# License Scope
 
 This repository uses Apache License 2.0 for the code portion of the project, but not every file in the repository should be treated as open-source code.
 
