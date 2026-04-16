@@ -8,10 +8,10 @@ Beautiful icon color patch loading process for bad network environments. A small
 
 ![Image text](https://github.com/wyfang/wyfang.github.io/blob/master/share/img/201904281548.png)
 
-## Open Source License / 开源许可
+## Open Source License
 
 The code in this repository is licensed under Apache-2.0.
 
 Personal assets, branding materials, showcase content, and third-party resources are not automatically covered by that license.
 
-See [LICENSE](LICENSE), [NOTICE](NOTICE), and [LICENSE_SCOPE.md](LICENSE_SCOPE.md) for details.
+See [LICENSE](LICENSE), [NOTICE](NOTICE), and [LICENSE_SCOPE](LICENSE_SCOPE.md) for details.
