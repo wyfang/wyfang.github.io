@@ -431,6 +431,11 @@ a.wifi-text-qr-text:active {
     color: #ffffff;
 }
 
+a.wifi-text:hover,
+a.wifi-text-qr-text:hover {
+    color: #ffffff;
+}
+
 .wifi-text img,
 .wifi-text-qr-text img {
     filter: brightness(0.5);
