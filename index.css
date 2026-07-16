@@ -17,6 +17,9 @@ html {
 }
 
 :root {
+    --wifi-link-icon-size: 70px;
+    --wifi-link-reveal-duration: 0.4s;
+    --wifi-motion-easing: cubic-bezier(0.08, 0.64, 0.41, 0.99);
     --wifi-bg-mask-opacity: 1;
     --wifi-bg-mask-night-opacity: 0;
     --wifi-bg-mask-background: linear-gradient(180deg, #ECF1F3 10%, rgba(236, 241, 243, 0.7) 29.56%);
@@ -31,7 +34,6 @@ html {
     --wifi-link-text-hover-color: #000000;
     --wifi-link-img-filter: none;
     --wifi-link-img-hover-filter: brightness(1.12) saturate(1.08);
-    --wifi-link-loading-hover-opacity: 0.18;
     --wifi-line-color: #00000017;
     --wifi-tag-color: #000000bd;
     --wifi-tag-bg: #ffffffad;
@@ -62,7 +64,6 @@ html.dark-mode {
     --wifi-link-text-hover-color: #ffffff;
     --wifi-link-img-filter: brightness(90%);
     --wifi-link-img-hover-filter: brightness(110%) saturate(1.08);
-    --wifi-link-loading-hover-opacity: 0.24;
     --wifi-line-color: #ffffff14;
     --wifi-tag-color: #ffffffa3;
     --wifi-tag-bg: #00000052;
@@ -209,24 +210,6 @@ html.theme-transitioning .wifi-line {
     }
 }
 
-.wifi-link-img {
-    position: relative;
-}
-.wifi-link-img img {
-    opacity: 0;
-    transition: opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-.wifi-linkloading {
-    position: absolute;
-    background: #F4F4F4;
-    border-radius: 50%;
-    top: 0px;
-    left: 0px;
-    z-index: -2;
-    width: 70px;
-    height: 70px;
-}
-
 .wifi-bg-video {
     margin: 0 auto;
     width: 100%;
@@ -343,25 +326,39 @@ a:active {
 
 .wifi-link-img {
     position: relative;
+    width: var(--wifi-link-icon-size);
+    height: var(--wifi-link-icon-size);
+    isolation: isolate;
 }
 
 .wifi-linkloading {
     position: absolute;
+    inset: 0;
     background: #F4F4F4;
     border-radius: 50%;
-    top: 0px;
-    left: 0px;
-    z-index: -2;
-    width: 70px;
-    height: 70px;
-    opacity: 0.08;
-    transform: scale(0.82);
-    transition: opacity 0.22s ease, transform 0.22s ease;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity var(--wifi-link-reveal-duration) var(--wifi-motion-easing);
+}
+
+.wifi-link-img.is-loaded img {
+    opacity: 1;
+}
+
+.wifi-link-img.is-settled .wifi-linkloading {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity var(--wifi-link-reveal-duration) var(--wifi-motion-easing),
+        visibility 0s linear var(--wifi-link-reveal-duration);
 }
 
 .linktxt {
     width: max-content;
-    margin-top: 5px;
+    margin-top: 9px;
     color: var(--wifi-link-text-color);
     font-weight: 530;
     transition: color 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
@@ -373,23 +370,29 @@ a:active {
     align-items: flex-start;
     text-align: center;
     margin: 15px 18px 15px;
-    width: 70px;
+    width: var(--wifi-link-icon-size);
     opacity: 1;
     justify-content: center;
 }
 
 .wifi-link a {
-    width: 70px;
+    width: var(--wifi-link-icon-size);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .wifi-link img {
-    width: 70px;
-    height: 70px;
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
     filter: var(--wifi-link-img-filter);
-    transition: filter 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99),
+    transition:
+        opacity var(--wifi-link-reveal-duration) var(--wifi-motion-easing),
+        filter 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99),
         transform 0.22s ease;
 }
 
@@ -398,13 +401,16 @@ a:active {
     transform: scale(1.04);
 }
 
-.wifi-link:hover .wifi-linkloading {
-    opacity: var(--wifi-link-loading-hover-opacity);
-    transform: scale(1);
-}
-
 .wifi-link:hover .linktxt {
     color: var(--wifi-link-text-hover-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wifi-link img,
+    .wifi-linkloading,
+    .wifi-link-img.is-settled .wifi-linkloading {
+        transition: none;
+    }
 }
 
 .wifi-line {
