@@ -8,4 +8,3 @@ document.querySelectorAll('[wificlick2copy]').forEach(function(element) {
       copyTextToClipboard(text);
     });
   });
-
