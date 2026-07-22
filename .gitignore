@@ -1,1 +1,12 @@
 .DS_Store
+
+# Large media files are hosted outside this repository.
+*.webm
+*.mp4
+*.mp3
+
+# Download archives removed from the site and its Git history.
+/download/*.zip
+/img/avatar_all.zip
+/cha/*.zip
+/web/blankname/Blankname.zip
