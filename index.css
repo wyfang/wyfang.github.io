@@ -294,6 +294,11 @@ a:active {
     height: 88px;
 }
 
+.wifi-avatar-host > svg {
+    transform: scale(1.2264);
+    transform-origin: center;
+}
+
 .wifi-face img:hover,
 .wifi-face-wifi:hover .wifi-avatar-media {
     opacity: 0.82;
