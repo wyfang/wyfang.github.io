@@ -5,6 +5,9 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const fallbackAlt = 'This is my avatar, I use this avatar in most places.';
 const minAnimationTime = 8000;
 const maxAnimationTime = 14000;
+const initialAnimation = availableAnimations.includes('listening')
+    ? 'listening'
+    : availableAnimations[0];
 
 let avatar = null;
 let currentAnimation = null;
@@ -112,7 +115,7 @@ function startAvatar() {
     if (!host || avatar || reduceMotion.matches || !availableAnimations.length) return;
 
     try {
-        currentAnimation = randomAnimation();
+        currentAnimation = initialAnimation;
         avatar = createAvatar(host, {
             animation: currentAnimation,
             size: '100%',

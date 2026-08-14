@@ -275,28 +275,23 @@ a:active {
     margin: 0 auto;
     cursor: pointer;
     margin-top: 100px;
-    width: 88px;
+    width: 108px;
 }
 
 /* 使用 wifi-face-wifi 夜间将会反色 */
 
 .wifi-face img,
 .wifi-face-wifi .wifi-avatar-media {
-    width: 88px;
-    height: 88px;
+    width: 108px;
+    height: 108px;
     display: block;
     transition: opacity 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99),
         filter 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
 .wifi-avatar-host {
-    width: 88px;
-    height: 88px;
-}
-
-.wifi-avatar-host > svg {
-    transform: scale(1.2264);
-    transform-origin: center;
+    width: 108px;
+    height: 108px;
 }
 
 .wifi-face img:hover,
