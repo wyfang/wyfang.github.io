@@ -92,7 +92,7 @@ p, span {
   cursor: url(img/wifi-cursor-text.svg) 6 13, text;
 }
 
-a, button, .wifi-cursor-pointer, .wifi-face-wifi img, .wifi-foot-links {
+a, button, .wifi-cursor-pointer, .wifi-face-wifi, .wifi-foot-links {
   cursor: url(img/wifi-cursor-pointer.svg) 9 4, pointer;
 }
 
@@ -175,7 +175,7 @@ html.theme-transitioning .wifi-bg-mask-night {
 }
 
 html.theme-transitioning .wifi-txt img,
-html.theme-transitioning .wifi-face-wifi img,
+html.theme-transitioning .wifi-face-wifi .wifi-avatar-media,
 html.theme-transitioning .wifi-link img,
 html.theme-transitioning .wifi-text:not(:hover) img,
 html.theme-transitioning .wifi-text-qr:not(:hover) .wifi-text-qr-text img {
@@ -281,25 +281,31 @@ a:active {
 /* 使用 wifi-face-wifi 夜间将会反色 */
 
 .wifi-face img,
-.wifi-face-wifi img {
+.wifi-face-wifi .wifi-avatar-media {
     width: 88px;
     height: 88px;
+    display: block;
     transition: opacity 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99),
         filter 0.4s cubic-bezier(0.08, 0.64, 0.41, 0.99);
 }
 
+.wifi-avatar-host {
+    width: 88px;
+    height: 88px;
+}
+
 .wifi-face img:hover,
-.wifi-face-wifi img:hover {
+.wifi-face-wifi:hover .wifi-avatar-media {
     opacity: 0.82;
     filter: brightness(1.12) saturate(1.05);
 }
 
 .wifi-txt img,
-.wifi-face-wifi img {
+.wifi-face-wifi .wifi-avatar-media {
     filter: var(--wifi-brand-filter);
 }
 
-.wifi-face-wifi img:hover {
+.wifi-face-wifi:hover .wifi-avatar-media {
     opacity: var(--wifi-face-hover-opacity);
     filter: var(--wifi-face-wifi-hover-filter);
 }
@@ -406,6 +412,7 @@ a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .wifi-face-wifi .wifi-avatar-media,
     .wifi-link img,
     .wifi-linkloading,
     .wifi-link-img.is-settled .wifi-linkloading {
