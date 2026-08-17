@@ -1,4 +1,4 @@
-import { availableAnimations, createAvatar } from './avatar.js';
+import { availableAnimations, createAvatar } from './avatar.js?v=20260817';
 
 const host = document.querySelector('#animated-avatar');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -66,7 +66,7 @@ function cutOutAvatarEyes(svg) {
 function createFallbackImage() {
     const image = document.createElement('img');
     image.className = 'wifi-avatar-media';
-    image.src = 'img/face.svg';
+    image.src = 'img/face.svg?v=20260817';
     image.alt = fallbackAlt;
     return image;
 }
