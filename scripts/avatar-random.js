@@ -5,8 +5,8 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const fallbackAlt = 'This is my avatar, I use this avatar in most places.';
 const minAnimationTime = 8000;
 const maxAnimationTime = 14000;
-const initialAnimation = availableAnimations.includes('listening')
-    ? 'listening'
+const initialAnimation = availableAnimations.includes('idle')
+    ? 'idle'
     : availableAnimations[0];
 
 let avatar = null;
