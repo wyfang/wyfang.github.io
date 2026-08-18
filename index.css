@@ -20,12 +20,6 @@ html {
     --wifi-link-icon-size: 70px;
     --wifi-link-reveal-duration: 0.4s;
     --wifi-motion-easing: cubic-bezier(0.08, 0.64, 0.41, 0.99);
-    --wifi-bg-mask-opacity: 1;
-    --wifi-bg-mask-night-opacity: 0;
-    --wifi-bg-mask-background: linear-gradient(180deg, #ECF1F3 10%, rgba(236, 241, 243, 0.7) 29.56%);
-    --wifi-bg-mask-night-background: linear-gradient(180deg, #080C0F 10%, rgba(8, 12, 15, 0.76) 32.56%, rgba(8, 12, 15, 0.76) 100%);
-    --wifi-bg-mask-desktop-background: rgba(236, 241, 243, 0.70);
-    --wifi-bg-mask-night-desktop-background: rgba(8, 12, 15, 0.76);
     --wifi-link-color: #0000005c;
     --wifi-brand-filter: none;
     --wifi-face-hover-opacity: 0.82;
@@ -54,8 +48,6 @@ html {
 }
 
 html.dark-mode {
-    --wifi-bg-mask-opacity: 0;
-    --wifi-bg-mask-night-opacity: 1;
     --wifi-link-color: #0000005c;
     --wifi-brand-filter: invert(100%) opacity(90%);
     --wifi-face-hover-opacity: 1;
@@ -136,44 +128,6 @@ body {
     min-width: 300px;
 }
 
-.wifi-bg {
-    width: 120%;
-    height: 120%;
-    position: fixed;
-    top: -10%;
-    right: -10%;
-    z-index: -100;
-    background: #ffffff00;
-}
-
-.wifi-bg,
-.wifi-bg * {
-    pointer-events: none;
-}
-
-.wifi-bg-mask,
-.wifi-bg-mask-night {
-    width: 120%;
-    height: 120%;
-    position: fixed;
-    transition: opacity 0.4s ease-in-out;
-}
-
-.wifi-bg-mask {
-    opacity: var(--wifi-bg-mask-opacity);
-    background: var(--wifi-bg-mask-background);
-}
-
-.wifi-bg-mask-night {
-    opacity: var(--wifi-bg-mask-night-opacity);
-    background: var(--wifi-bg-mask-night-background);
-}
-
-html.theme-transitioning .wifi-bg-mask,
-html.theme-transitioning .wifi-bg-mask-night {
-    transition-duration: 2s;
-}
-
 html.theme-transitioning .wifi-txt img,
 html.theme-transitioning .wifi-face-wifi .wifi-avatar-media,
 html.theme-transitioning .wifi-link img,
@@ -199,32 +153,6 @@ html.theme-transitioning .wifi-line {
     transition-timing-function: ease-in-out;
 }
 
-/* 媒体查询：屏幕宽度大于1024px时的样式 */
-@media screen and (min-width: 1024px) {
-    .wifi-bg-mask {
-        background: var(--wifi-bg-mask-desktop-background);
-    }
-
-    .wifi-bg-mask-night {
-        background: var(--wifi-bg-mask-night-desktop-background);
-    }
-}
-
-.wifi-bg-video {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    max-width: 1920px;
-    position: relative;
-    z-index: -101;
-}
-
-.wifi-bg-videomark {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-}
 
 .wifi-body {
     box-sizing: border-box;
@@ -655,58 +583,6 @@ a.wifi-text-qr-text:hover {
 .wifi-url2 {
     height: 16px;
     margin-left: 8px;
-}
-
-.wifi-bg-v video {
-    width: 100%;
-    margin: 0 auto;
-    z-index: -103;
-    opacity: 0;
-}
-
-.wifi-bg-video-lowposter {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: -104;
-}
-
-.wifi-bg-video-lowposter img {
-    width: 100%;
-    filter: blur(10px);
-}
-
-@keyframes wifi-10 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.wifi-bg-v video {
-    animation: wifi-10 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-}
-
-@keyframes wifi-11 {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-.wifi-bg-video-lowposter {
-    animation: wifi-11 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
 }
 
 /* .wifi-scroll::-webkit-scrollbar {

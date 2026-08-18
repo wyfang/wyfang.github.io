@@ -1,0 +1,283 @@
+:root {
+    --wifi-bg-mask-opacity: 1;
+    --wifi-bg-mask-night-opacity: 0;
+    --wifi-bg-mask-background: linear-gradient(180deg, #ECF1F3 10%, rgba(236, 241, 243, 0.7) 29.56%);
+    --wifi-bg-mask-night-background: linear-gradient(180deg, #080C0F 10%, rgba(8, 12, 15, 0.76) 32.56%, rgba(8, 12, 15, 0.76) 100%);
+    --wifi-bg-mask-desktop-background: rgba(236, 241, 243, 0.70);
+    --wifi-bg-mask-night-desktop-background: rgba(8, 12, 15, 0.76);
+    --wifi-background-reveal-duration: 900ms;
+    --wifi-scroll-blur-duration: 560ms;
+    --wifi-scroll-blur-easing: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+    background-color: #ECF1F3;
+}
+
+html.dark-mode {
+    --wifi-bg-mask-opacity: 0;
+    --wifi-bg-mask-night-opacity: 1;
+    background-color: #080C0F;
+}
+
+.wifi-body {
+    position: relative;
+    z-index: 1;
+}
+
+.wifi-background {
+    position: fixed;
+    z-index: 0;
+    inset: -10%;
+    overflow: hidden;
+    pointer-events: none;
+    background: transparent;
+    contain: strict;
+}
+
+html.wifi-background-loading .wifi-background {
+    opacity: 0;
+}
+
+html.wifi-background-visible .wifi-background {
+    opacity: 1;
+    transition: opacity var(--wifi-background-reveal-duration) cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wifi-background__image,
+.wifi-background__mask {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wifi-background__image {
+    display: block;
+    object-fit: cover;
+}
+
+.wifi-background__mask {
+    transition: opacity 0.4s ease-in-out;
+}
+
+.wifi-background__mask--day {
+    opacity: var(--wifi-bg-mask-opacity);
+    background: var(--wifi-bg-mask-background);
+}
+
+.wifi-background__mask--night {
+    opacity: var(--wifi-bg-mask-night-opacity);
+    background: var(--wifi-bg-mask-night-background);
+}
+
+html.theme-transitioning .wifi-background__mask {
+    transition-duration: 2s;
+}
+
+@media screen and (min-width: 1024px) {
+    .wifi-background__mask--day {
+        background: var(--wifi-bg-mask-desktop-background);
+    }
+
+    .wifi-background__mask--night {
+        background: var(--wifi-bg-mask-night-desktop-background);
+    }
+}
+
+.wifi-scroll-effects,
+.wifi-scroll-effect {
+    position: fixed;
+    inset-inline: 0;
+    pointer-events: none;
+}
+
+.wifi-scroll-effects {
+    z-index: 50;
+    inset-block: 0;
+}
+
+.wifi-scroll-effect {
+    height: 44px;
+    visibility: hidden;
+}
+
+.wifi-scroll-effects.is-ready .wifi-scroll-effect {
+    transition: visibility 0s linear var(--wifi-scroll-blur-duration);
+}
+
+.wifi-scroll-effects.has-scroll-above .wifi-scroll-effect--top,
+.wifi-scroll-effects.has-scroll-below .wifi-scroll-effect--bottom {
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.wifi-scroll-effect--top {
+    top: 0;
+}
+
+.wifi-scroll-effect--bottom {
+    bottom: 0;
+}
+
+.wifi-scroll-effect > div,
+.wifi-scroll-effect::before,
+.wifi-scroll-effect::after {
+    position: absolute;
+    inset: 0;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+}
+
+.wifi-scroll-effects.is-ready .wifi-scroll-effect > div,
+.wifi-scroll-effects.is-ready .wifi-scroll-effect::before,
+.wifi-scroll-effects.is-ready .wifi-scroll-effect::after {
+    transition:
+        -webkit-backdrop-filter var(--wifi-scroll-blur-duration) var(--wifi-scroll-blur-easing),
+        backdrop-filter var(--wifi-scroll-blur-duration) var(--wifi-scroll-blur-easing);
+}
+
+.wifi-scroll-effect::before,
+.wifi-scroll-effect::after {
+    content: "";
+}
+
+.wifi-scroll-effect::before {
+    --wifi-scroll-blur-target: 0.5px;
+    z-index: 1;
+}
+
+.wifi-scroll-effect--bottom::before {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 12.5%, #000 25%, transparent 37.5%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 12.5%, #000 25%, transparent 37.5%);
+}
+
+.wifi-scroll-effect--top::before {
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 12.5%, #000 25%, transparent 37.5%);
+    mask-image: linear-gradient(to top, transparent 0%, #000 12.5%, #000 25%, transparent 37.5%);
+}
+
+.wifi-scroll-effect > div:nth-of-type(1) {
+    --wifi-scroll-blur-target: 1px;
+    z-index: 2;
+}
+
+.wifi-scroll-effect--bottom > div:nth-of-type(1) {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 12.5%, #000 25%, #000 37.5%, transparent 50%);
+    mask-image: linear-gradient(to bottom, transparent 12.5%, #000 25%, #000 37.5%, transparent 50%);
+}
+
+.wifi-scroll-effect--top > div:nth-of-type(1) {
+    -webkit-mask-image: linear-gradient(to top, transparent 12.5%, #000 25%, #000 37.5%, transparent 50%);
+    mask-image: linear-gradient(to top, transparent 12.5%, #000 25%, #000 37.5%, transparent 50%);
+}
+
+.wifi-scroll-effect > div:nth-of-type(2) {
+    --wifi-scroll-blur-target: 2px;
+    z-index: 3;
+}
+
+.wifi-scroll-effect--bottom > div:nth-of-type(2) {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 25%, #000 37.5%, #000 50%, transparent 62.5%);
+    mask-image: linear-gradient(to bottom, transparent 25%, #000 37.5%, #000 50%, transparent 62.5%);
+}
+
+.wifi-scroll-effect--top > div:nth-of-type(2) {
+    -webkit-mask-image: linear-gradient(to top, transparent 25%, #000 37.5%, #000 50%, transparent 62.5%);
+    mask-image: linear-gradient(to top, transparent 25%, #000 37.5%, #000 50%, transparent 62.5%);
+}
+
+.wifi-scroll-effect > div:nth-of-type(3) {
+    --wifi-scroll-blur-target: 3px;
+    z-index: 4;
+}
+
+.wifi-scroll-effect--bottom > div:nth-of-type(3) {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 37.5%, #000 50%, #000 62.5%, transparent 75%);
+    mask-image: linear-gradient(to bottom, transparent 37.5%, #000 50%, #000 62.5%, transparent 75%);
+}
+
+.wifi-scroll-effect--top > div:nth-of-type(3) {
+    -webkit-mask-image: linear-gradient(to top, transparent 37.5%, #000 50%, #000 62.5%, transparent 75%);
+    mask-image: linear-gradient(to top, transparent 37.5%, #000 50%, #000 62.5%, transparent 75%);
+}
+
+.wifi-scroll-effect > div:nth-of-type(4) {
+    --wifi-scroll-blur-target: 4px;
+    z-index: 5;
+}
+
+.wifi-scroll-effect--bottom > div:nth-of-type(4) {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 50%, #000 62.5%, #000 75%, transparent 87.5%);
+    mask-image: linear-gradient(to bottom, transparent 50%, #000 62.5%, #000 75%, transparent 87.5%);
+}
+
+.wifi-scroll-effect--top > div:nth-of-type(4) {
+    -webkit-mask-image: linear-gradient(to top, transparent 50%, #000 62.5%, #000 75%, transparent 87.5%);
+    mask-image: linear-gradient(to top, transparent 50%, #000 62.5%, #000 75%, transparent 87.5%);
+}
+
+.wifi-scroll-effect > div:nth-of-type(5) {
+    --wifi-scroll-blur-target: 5px;
+    z-index: 6;
+}
+
+.wifi-scroll-effect--bottom > div:nth-of-type(5) {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 62.5%, #000 75%, #000 87.5%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 62.5%, #000 75%, #000 87.5%, transparent 100%);
+}
+
+.wifi-scroll-effect--top > div:nth-of-type(5) {
+    -webkit-mask-image: linear-gradient(to top, transparent 62.5%, #000 75%, #000 87.5%, transparent 100%);
+    mask-image: linear-gradient(to top, transparent 62.5%, #000 75%, #000 87.5%, transparent 100%);
+}
+
+.wifi-scroll-effect > div:nth-of-type(6) {
+    --wifi-scroll-blur-target: 6px;
+    z-index: 7;
+}
+
+.wifi-scroll-effect--bottom > div:nth-of-type(6) {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 75%, #000 87.5%, #000 100%);
+    mask-image: linear-gradient(to bottom, transparent 75%, #000 87.5%, #000 100%);
+}
+
+.wifi-scroll-effect--top > div:nth-of-type(6) {
+    -webkit-mask-image: linear-gradient(to top, transparent 75%, #000 87.5%, #000 100%);
+    mask-image: linear-gradient(to top, transparent 75%, #000 87.5%, #000 100%);
+}
+
+.wifi-scroll-effect::after {
+    --wifi-scroll-blur-target: 64px;
+    z-index: 8;
+}
+
+.wifi-scroll-effects.has-scroll-above .wifi-scroll-effect--top > div,
+.wifi-scroll-effects.has-scroll-above .wifi-scroll-effect--top::before,
+.wifi-scroll-effects.has-scroll-above .wifi-scroll-effect--top::after,
+.wifi-scroll-effects.has-scroll-below .wifi-scroll-effect--bottom > div,
+.wifi-scroll-effects.has-scroll-below .wifi-scroll-effect--bottom::before,
+.wifi-scroll-effects.has-scroll-below .wifi-scroll-effect--bottom::after {
+    -webkit-backdrop-filter: blur(var(--wifi-scroll-blur-target));
+    backdrop-filter: blur(var(--wifi-scroll-blur-target));
+}
+
+.wifi-scroll-effect--bottom::after {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 87.5%, #000 100%);
+    mask-image: linear-gradient(to bottom, transparent 87.5%, #000 100%);
+}
+
+.wifi-scroll-effect--top::after {
+    -webkit-mask-image: linear-gradient(to top, transparent 87.5%, #000 100%);
+    mask-image: linear-gradient(to top, transparent 87.5%, #000 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.wifi-background-visible .wifi-background,
+    .wifi-scroll-effects.is-ready .wifi-scroll-effect > div,
+    .wifi-scroll-effects.is-ready .wifi-scroll-effect::before,
+    .wifi-scroll-effects.is-ready .wifi-scroll-effect::after,
+    .wifi-scroll-effects.is-ready .wifi-scroll-effect {
+        transition: none;
+    }
+}
