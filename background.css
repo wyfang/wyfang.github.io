@@ -1,22 +1,47 @@
+@property --wifi-bg-mask-top-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #ECF1F3;
+}
+
+@property --wifi-bg-mask-body-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgba(236, 241, 243, 0.7);
+}
+
+@property --wifi-bg-mask-stop {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 29.56%;
+}
+
+@property --wifi-bg-mask-desktop-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgba(236, 241, 243, 0.70);
+}
+
 :root {
-    --wifi-bg-mask-opacity: 1;
-    --wifi-bg-mask-night-opacity: 0;
-    --wifi-bg-mask-background: linear-gradient(180deg, #ECF1F3 10%, rgba(236, 241, 243, 0.7) 29.56%);
-    --wifi-bg-mask-night-background: linear-gradient(180deg, #080C0F 10%, rgba(8, 12, 15, 0.76) 32.56%, rgba(8, 12, 15, 0.76) 100%);
-    --wifi-bg-mask-desktop-background: rgba(236, 241, 243, 0.70);
-    --wifi-bg-mask-night-desktop-background: rgba(8, 12, 15, 0.76);
-    --wifi-background-reveal-duration: 900ms;
+    --wifi-bg-mask-top-color: #ECF1F3;
+    --wifi-bg-mask-body-color: rgba(236, 241, 243, 0.7);
+    --wifi-bg-mask-stop: 29.56%;
+    --wifi-bg-mask-desktop-color: rgba(236, 241, 243, 0.70);
+    --wifi-background-reveal-duration: 3200ms;
     --wifi-scroll-blur-duration: 560ms;
     --wifi-scroll-blur-easing: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html {
     background-color: #ECF1F3;
+    transition: background-color 0.4s ease-in-out;
 }
 
 html.dark-mode {
-    --wifi-bg-mask-opacity: 0;
-    --wifi-bg-mask-night-opacity: 1;
+    --wifi-bg-mask-top-color: #080C0F;
+    --wifi-bg-mask-body-color: rgba(8, 12, 15, 0.76);
+    --wifi-bg-mask-stop: 32.56%;
+    --wifi-bg-mask-desktop-color: rgba(8, 12, 15, 0.76);
     background-color: #080C0F;
 }
 
@@ -44,6 +69,7 @@ html.wifi-background-visible .wifi-background {
     transition: opacity var(--wifi-background-reveal-duration) cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.wifi-background__base,
 .wifi-background__image,
 .wifi-background__mask {
     position: absolute;
@@ -52,36 +78,43 @@ html.wifi-background-visible .wifi-background {
     height: 100%;
 }
 
+.wifi-background__base {
+    background-color: #ECF1F3;
+    transition: background-color 0.4s ease-in-out;
+}
+
+html.dark-mode .wifi-background__base {
+    background-color: #080C0F;
+}
+
 .wifi-background__image {
     display: block;
     object-fit: cover;
 }
 
 .wifi-background__mask {
-    transition: opacity 0.4s ease-in-out;
+    background: linear-gradient(
+        180deg,
+        var(--wifi-bg-mask-top-color) 10%,
+        var(--wifi-bg-mask-body-color) var(--wifi-bg-mask-stop),
+        var(--wifi-bg-mask-body-color) 100%
+    );
+    transition:
+        --wifi-bg-mask-top-color 0.4s ease-in-out,
+        --wifi-bg-mask-body-color 0.4s ease-in-out,
+        --wifi-bg-mask-stop 0.4s ease-in-out,
+        --wifi-bg-mask-desktop-color 0.4s ease-in-out;
 }
 
-.wifi-background__mask--day {
-    opacity: var(--wifi-bg-mask-opacity);
-    background: var(--wifi-bg-mask-background);
-}
-
-.wifi-background__mask--night {
-    opacity: var(--wifi-bg-mask-night-opacity);
-    background: var(--wifi-bg-mask-night-background);
-}
-
+html.theme-transitioning,
+html.theme-transitioning .wifi-background__base,
 html.theme-transitioning .wifi-background__mask {
     transition-duration: 2s;
 }
 
 @media screen and (min-width: 1024px) {
-    .wifi-background__mask--day {
-        background: var(--wifi-bg-mask-desktop-background);
-    }
-
-    .wifi-background__mask--night {
-        background: var(--wifi-bg-mask-night-desktop-background);
+    .wifi-background__mask {
+        background: var(--wifi-bg-mask-desktop-color);
     }
 }
 
@@ -273,6 +306,12 @@ html.theme-transitioning .wifi-background__mask {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html,
+    .wifi-background__base,
+    .wifi-background__mask {
+        transition: none !important;
+    }
+
     html.wifi-background-visible .wifi-background,
     .wifi-scroll-effects.is-ready .wifi-scroll-effect > div,
     .wifi-scroll-effects.is-ready .wifi-scroll-effect::before,
