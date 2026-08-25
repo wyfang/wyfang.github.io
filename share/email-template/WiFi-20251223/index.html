@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <title>Personal Letter</title>
+    <style>
+        /* 基础重置 */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+        
+        /* 默认样式 (Light Mode) */
+        body { margin: 0; padding: 0; background-color: #f4f6f5; }
+        .dark-img { display: none; display: none !important; } 
+        
+        /* ==========================================
+           响应式布局 (Mobile Optimization)
+           ========================================== */
+        @media screen and (max-width: 600px) {
+            /* 1. 强制铺满全屏，去掉边距 */
+            .email-container { width: 100% !important; margin: 0 !important; border: 0 !important; }
+            
+            /* 2. 去掉外部背景的 padding，让卡片顶格 */
+            .outer-padding { padding: 0 !important; }
+            
+            /* 3. 去掉卡片阴影、圆角，背景改为纯白 (与 body 融合) */
+            .card-bg { box-shadow: none !important; background-color: #ffffff !important; border-radius: 0 !important; }
+            
+            /* 4. body 背景也强制变白 */
+            body, .body-bg { background-color: #ffffff !important; }
+            
+            /* 5. 调整内部间距，手机上稍微紧凑一点 */
+            .content-padding { padding: 40px 25px !important; }
+        }
+
+        /* ========= 暗色模式核心代码 ========= */
+        @media (prefers-color-scheme: dark) {
+            body, .body-bg { background-color: #1a1a1a !important; }
+            .card-bg { background-color: #262626 !important; color: #e0e0e0 !important; box-shadow: none !important; }
+            h1, .text-primary { color: #ffffff !important; }
+            .text-secondary { color: #bbbbbb !important; }
+            
+            /* 签名图片切换逻辑 */
+            .light-img { display: none !important; width: 0 !important; height: 0 !important; overflow: hidden !important; line-height: 0 !important; }
+            .dark-img { display: block !important; width: auto !important; overflow: visible !important; float: none !important; max-height: inherit !important; line-height: auto !important; margin-top: 0px !important; visibility: visible !important; }
+        }
+    </style>
+</head>
+<body class="body-bg" style="margin: 0; padding: 0; background-color: #f4f6f5; font-family: Georgia, 'Times New Roman', 'KaiTi', serif;">
+
+    <table class="body-bg" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #f4f6f5;">
+        <tr>
+            <!-- 
+               【关键修改】
+               增加了 class="outer-padding" 用于手机端去除边距
+            -->
+            <td align="center" class="outer-padding" style="padding: 40px 10px; padding-bottom: 80px;">
+                
+                <!-- 卡片容器 -->
+                <!-- [if mso]>
+                <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+                <tr>
+                <td align="center" valign="top" width="600">
+                <![endif]-->
+                <table class="email-container card-bg" border="0" cellpadding="0" cellspacing="0" width="600" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; max-width: 600px;">
+                    
+                    <!-- 顶部装饰条 -->
+                    <tr>
+                        <td height="6" style="background-color: #979a5f;"></td>
+                    </tr>
+
+                    <!-- 内容区域 -->
+                    <tr>
+                        <td class="content-padding card-bg" style="padding: 60px 60px 70px 60px; text-align: left; color: #4a4a4a;">
+                            
+                            <!-- 称呼 -->
+                            <h1 class="text-primary" style="margin: 0 0 30px 0; font-size: 24px; font-weight: normal; color: #333333; letter-spacing: 0.5px;">
+                                Hi, Friend
+                            </h1>
+
+                            <!-- 正文 -->
+                            <div class="text-secondary" style="font-size: 16px; line-height: 1.8; color: #555555;">
+                                <p style="margin-bottom: 20px;">
+                                    见信如晤。
+                                </p>
+                                <p style="margin-bottom: 20px;">
+                                    删繁就简，这封信现在只剩下想对你说的话了。
+                                </p>
+                                <p style="margin-bottom: 20px;">
+                                    昨晚下了一场雨，空气里全是泥土的味道。这样的时刻，总让人觉得世界很安静。
+                                </p>
+                                <p style="margin-bottom: 0;">
+                                    祝你今晚好梦。
+                                </p>
+                            </div>
+
+                            <!-- 署名区域 (靠右) -->
+                            <div style="text-align: right; margin-top: 60px;">
+                                <p class="text-primary" style="font-size: 16px; font-weight: normal; margin: 0; color: #333333; margin-bottom: 15px;">
+                                    Yours,
+                                </p>
+                                
+                                <!-- 浅色模式图片 -->
+                                <img src="https://wangyifang.com/share/img/WangYifang-Signatureblack.png" class="light-img" width="225" height="60" alt="Wang Yifang" style="display: inline-block; border: 0; width: 225px; height: 60px;">
+
+                                <!-- 深色模式图片 -->
+                                <!--[if !mso]><! -->
+                                <div class="dark-img" style="display: none; overflow: hidden; float: none; width: 0px; max-height: 0px; line-height: 0px; visibility: hidden;">
+                                     <img src="https://wangyifang.com/share/img/WangYifang-Signaturewhite.png" width="225" height="60" alt="Wang Yifang" style="border:0; width: 225px; height: 60px;">
+                                </div>
+                                <!--<![endif]-->
+                                
+                            </div>
+
+                        </td>
+                    </tr>
+                    
+                </table>
+                <!-- [if mso]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

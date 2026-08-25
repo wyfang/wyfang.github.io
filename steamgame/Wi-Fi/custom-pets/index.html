@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wi-Fi 自定义宠物说明</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #09090b;
+        --foreground: #fafafa;
+        --muted: #a1a1aa;
+        --border: #27272a;
+        --card: #0f0f11;
+        --accent: #18181b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--foreground);
+        font-family:
+          ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(880px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 64px;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      p {
+        margin: 10px 0 0;
+        color: var(--muted);
+      }
+
+      section {
+        margin-top: 18px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--card);
+        padding: 20px;
+      }
+
+      code,
+      pre {
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          monospace;
+      }
+
+      code {
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--accent);
+        padding: 2px 5px;
+        color: var(--foreground);
+      }
+
+      pre {
+        overflow: auto;
+        margin: 12px 0 0;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: #050506;
+        padding: 14px;
+        color: #e4e4e7;
+        font-size: 13px;
+      }
+
+      ol,
+      ul {
+        margin: 12px 0 0;
+        padding-left: 22px;
+        color: var(--muted);
+      }
+
+      li + li {
+        margin-top: 6px;
+      }
+
+      .lead {
+        max-width: 720px;
+        margin-top: 12px;
+        font-size: 16px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      @media (max-width: 720px) {
+        main {
+          padding-top: 32px;
+        }
+
+        h1 {
+          font-size: 26px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Wi-Fi 自定义宠物</h1>
+      <p class="lead">
+        一个宠物就是一个文件夹。文件夹名会显示在 Wi-Fi 的宠物菜单里，放入序列图后即可被识别。
+      </p>
+
+      <section>
+        <h2>放在哪里</h2>
+        <div class="grid">
+          <div>
+            <p>macOS</p>
+            <pre>~/Library/Application Support/com.wangyifang.Wi-Fi/pets/custom/</pre>
+          </div>
+          <div>
+            <p>Windows</p>
+            <pre>%LOCALAPPDATA%\com.wangyifang.Wi-Fi\pets\custom\</pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>最小文件结构</h2>
+        <pre>我的宠物/
+  spritesheet.webp</pre>
+        <p>
+          支持 <code>spritesheet.png</code>、<code>spritesheet.webp</code>、<code>spritesheet.gif</code>、<code>spritesheet.jpg</code>、<code>spritesheet.jpeg</code>。
+          如果没有 <code>config.json</code>，Wi-Fi 会使用默认配置。
+        </p>
+      </section>
+
+      <section>
+        <h2>可选 config.json</h2>
+        <pre>{
+  "spritesheet": "spritesheet.webp",
+  "frame": { "width": 192, "height": 208 },
+  "scale": 0.5,
+  "fps": 12,
+  "priority": 10,
+  "animations": {
+    "default": { "row": 1, "frames": 8, "fps": 6, "mode": "once" },
+    "hover": { "row": 1, "frames": 6, "fps": 6, "mode": "once" },
+    "dragLeft": { "row": 3, "frames": 8, "fps": 8, "mode": "loop" },
+    "dragRight": { "row": 2, "frames": 8, "fps": 8, "mode": "loop" }
+  }
+}</pre>
+        <p>
+          <code>row</code> 从 1 开始。<code>priority</code> 越小，菜单排序越靠前。
+        </p>
+      </section>
+
+      <section>
+        <h2>制作建议</h2>
+        <ul>
+          <li>每一帧尺寸保持一致，例如 192×208。</li>
+          <li>透明背景能让宠物看起来更自然。</li>
+          <li>鼠标命中区域可以使用 <code>interaction.hitMaskRow</code> 指定专用行。</li>
+          <li>替换文件后重新打开宠物菜单，Wi-Fi 会重新扫描本地自定义宠物。</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

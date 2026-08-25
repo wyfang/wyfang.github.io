@@ -30,6 +30,12 @@ Glyphicons Halflings 由 Jan Kovařík 创作，并经 Bootstrap 3 分发。Norm
 | `fonts/GoogleSansFlex.ttf` | Google Sans Flex；Copyright 2015 Google LLC；Google Sans 是 Google 的商标 |
 | `fonts/Mona-Sans.woff2` | Mona Sans；Copyright 2023 GitHub；保留字体名称 “Mona Sans” |
 
+## PDF.js
+
+`scripts/pdfviewer/` 是 [PDF.js 5.4.394](https://github.com/mozilla/pdf.js)，Copyright 2024 Mozilla Foundation，主体代码依据 [Apache License 2.0](./LICENSE) 分发。
+
+该分发包同时包含 Adobe CMaps、ICC profiles、PDFium/Foxit 标准字体、Liberation Sans、OpenJPEG 与 qcms 等资源。它们保留各自的版权和许可证，完整通知位于 `scripts/pdfviewer/web/cmaps/`、`iccs/`、`standard_fonts/` 与 `wasm/` 的 `LICENSE*` 文件中。
+
 ## CSS3 PIE
 
 `2.0/index.hyperesources/PIE.htc` 是 CSS3 PIE 1.0.0，Copyright 2010 Jason Johnston。本仓库选择其双许可证中的 [Apache License 2.0](./LICENSE)；上游源码位于 [lojjic/PIE](https://github.com/lojjic/PIE)。

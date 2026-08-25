@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>扫码加群</title>
+<style>
+  html,body{height:100%;margin:0;font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft Yahei", sans-serif;background:#e6eef0}
+  .page-tip{text-align:center;color:#6f7c7e;padding:28px 16px 8px;font-size:15px}
+  .container{display:flex;justify-content:center;padding:12px 16px 40px;box-sizing:border-box}
+  .card{
+    width:100%;
+    max-width:520px;
+    background:transparent;
+    border-radius:20px;
+    overflow:hidden;
+    box-sizing:border-box;
+    margin-top:12px;
+    padding:0;
+  }
+  .card img{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    border-radius:20px;
+  }
+
+  @media (max-width:420px){
+    .card{border-radius:16px}
+    .card img{border-radius:16px}
+  }
+</style>
+</head>
+<body>
+  <div class="page-tip">长按下方图片 - 识别图中的二维码，进行加群</div>
+
+  <div class="container">
+    <div class="card" role="img" aria-label="群二维码">
+      <img src="img/qrcode.jpg" alt="群二维码">
+    </div>
+  </div>
+</body>
+</html>

@@ -5,6 +5,15 @@
 *.mp4
 *.mp3
 
+# Keep the imported historical background videos backed up in GitHub.
+!/img/bg/*.webm
+
+# The downloaded legacy web archive is intentionally kept outside this repository.
+/web/
+
+# Generated minimal site archives are attached to GitHub Releases instead.
+/dist/
+
 # Download archives removed from the site and its Git history.
 /download/*.zip
 /img/avatar_all.zip
