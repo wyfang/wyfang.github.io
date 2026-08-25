@@ -13,10 +13,6 @@
 - 社交平台入口、好友码与二维码展示
 - 无框架静态部署
 
-## 许可
+## 版权说明
 
-仓库所有者原创的代码与代码文档，除明确例外外，依据 [Apache License 2.0](./LICENSE) 发布。动态头像运行引擎及其网站集成依据 [AGPL-3.0-only](./licenses/AGPL-3.0-only.txt) 发布，对应源码见 [Wi-Fi Avatar Lab](https://github.com/wyfang/wifi-avatar-lab)。
-
-个人内容与品牌素材保留所有权利。第三方代码、字体、图标、图片和历史导出文件不由仓库所有者依据 Apache-2.0 再许可。
-
-完整边界见 [LICENSE_SCOPE.md](./LICENSE_SCOPE.md)、[THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) 与 [ASSET_SOURCES.md](./ASSET_SOURCES.md)。
+原创代码依据 [Apache License 2.0](./LICENSE) 发布，动态头像代码依据 [AGPL-3.0-only](./licenses/AGPL-3.0-only.txt) 发布。个人品牌和素材不在许可范围内。
