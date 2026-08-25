@@ -1,4 +1,4 @@
-# wyfang.github.io
+# wangyifang.com
 
 王一方的个人主页，用一个静态页面汇集个人身份、社交平台与长期维护的站点入口。
 
