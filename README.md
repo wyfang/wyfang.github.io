@@ -1,17 +1,24 @@
-# wyfang.github.io & wangyifang.com
+# wyfang.github.io
 
-A personal website built with HTML, CSS, and JavaScript, with responsive layouts and automatic night mode support.
+王一方的个人主页，用一个静态页面汇集个人身份、社交平台与长期维护的站点入口。
 
-Beautiful icon color patch loading process for bad network environments. A small piece of social platform friend code and supports the mouse to display the QR code.
+[访问网站](https://wangyifang.com) · [更新记录](https://blog.wangyifang.com/mywebupdate/)
 
-[Update log (English is not supported)](https://blog.wangyifang.com/mywebupdate/)
+![网站预览](./share/img/201904281548.png)
 
-![Image text](https://github.com/wyfang/wyfang.github.io/blob/master/share/img/201904281548.png)
+## 特性
 
-## Open Source License
+- 响应式布局与自动深色模式
+- 程序化动态头像与静态降级
+- 社交平台入口、好友码与二维码展示
+- 无框架静态部署
 
-The code in this repository is licensed under Apache-2.0.
+## 版权与许可
 
-Personal assets, branding materials, showcase content, and third-party resources are not automatically covered by that license.
+Copyright © 2018–至今 Wang Yifang。
 
-See [LICENSE](LICENSE), [NOTICE](NOTICE), and [LICENSE_SCOPE](LICENSE_SCOPE.md) for details.
+仓库所有者原创的代码与代码文档，除明确例外外，依据 [Apache License 2.0](./LICENSE) 发布。动态头像运行引擎及其网站集成依据 [AGPL-3.0-only](./licenses/AGPL-3.0-only.txt) 发布，对应源码见 [Wi-Fi Avatar Lab](https://github.com/wyfang/wifi-avatar-lab)。
+
+个人内容与品牌素材保留所有权利。第三方代码、字体、图标、图片和历史导出文件不由仓库所有者依据 Apache-2.0 再许可。
+
+完整边界见 [LICENSE_SCOPE.md](./LICENSE_SCOPE.md)、[THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) 与 [ASSET_SOURCES.md](./ASSET_SOURCES.md)。
