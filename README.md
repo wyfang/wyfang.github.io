@@ -13,9 +13,7 @@
 - 社交平台入口、好友码与二维码展示
 - 无框架静态部署
 
-## 版权与许可
-
-Copyright © 2018–至今 Wang Yifang。
+## 许可
 
 仓库所有者原创的代码与代码文档，除明确例外外，依据 [Apache License 2.0](./LICENSE) 发布。动态头像运行引擎及其网站集成依据 [AGPL-3.0-only](./licenses/AGPL-3.0-only.txt) 发布，对应源码见 [Wi-Fi Avatar Lab](https://github.com/wyfang/wifi-avatar-lab)。
 
