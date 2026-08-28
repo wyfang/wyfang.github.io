@@ -16,6 +16,7 @@ const deploymentFiles = new Set([
   "AGENTS.md",
   "package-lock.json",
   "package.json",
+  "README.md",
   "scripts/prepare-worker-assets.mjs",
   "wrangler.jsonc",
 ]);
