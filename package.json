@@ -1,0 +1,12 @@
+{
+  "name": "wangyifang-com",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/prepare-worker-assets.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.127.0"
+  }
+}

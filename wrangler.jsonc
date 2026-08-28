@@ -1,0 +1,27 @@
+{
+  "name": "wangyifang-com",
+  "compatibility_date": "2026-08-28",
+  "build": {
+    "command": "npm run build"
+  },
+  "assets": {
+    "directory": "./.worker-assets",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    {
+      "pattern": "wangyifang.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.wangyifang.com",
+      "custom_domain": true
+    }
+  ],
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": false
+  }
+}

@@ -1,4 +1,7 @@
 .DS_Store
+.worker-assets/
+.wrangler/
+node_modules/
 
 # Large media files are hosted outside this repository.
 *.webm
