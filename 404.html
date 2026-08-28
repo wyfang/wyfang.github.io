@@ -1,133 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
-    <script src="/analytics.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#121212">
+    <title>404 | WANGYIFANG.COM</title>
+    <script src="/analytics.js" defer></script>
+    <style>
+        :root {
+            color-scheme: dark;
+            --page-gutter: clamp(1rem, 4vw, 2rem);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #121212;
+        }
+
+        body {
+            min-width: 280px;
+            min-height: 100vh;
+            min-height: 100svh;
+            margin: 0;
+            overflow-x: hidden;
+            color: #dadada;
+            background: #121212;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .error-page {
+            position: relative;
+            isolation: isolate;
+            display: grid;
+            grid-template-rows: auto minmax(1.5rem, 1fr) auto;
+            gap: clamp(1rem, 4vh, 2rem);
+            min-height: 100vh;
+            min-height: 100svh;
+            padding: var(--page-gutter);
+            overflow: hidden;
+        }
+
+        @supports (height: 100dvh) {
+            body,
+            .error-page {
+                min-height: 100dvh;
+            }
+        }
+
+        @supports (padding: max(0px)) {
+            .error-page {
+                padding-top: max(var(--page-gutter), env(safe-area-inset-top));
+                padding-right: max(var(--page-gutter), env(safe-area-inset-right));
+                padding-bottom: max(var(--page-gutter), env(safe-area-inset-bottom));
+                padding-left: max(var(--page-gutter), env(safe-area-inset-left));
+            }
+        }
+
+        .home-link {
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            justify-self: start;
+            min-height: 44px;
+            padding: 0.55rem 0.8rem;
+            border: 2px solid #777;
+            color: #999;
+            font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);
+            line-height: 1.2;
+            text-decoration: none;
+            transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .home-link svg {
+            width: 0.8em;
+            height: 0.8em;
+            margin-right: 0.45em;
+            flex: none;
+        }
+
+        .home-link:focus-visible {
+            color: #121212;
+            background: #dadada;
+            border-color: #dadada;
+            outline: 3px solid #fff;
+            outline-offset: 3px;
+        }
+
+        .background-wrapper {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            pointer-events: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .visual {
+            --rotation: 45deg;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: 0;
+            color: #282828;
+            font-size: 60vmax;
+            font-weight: 700;
+            line-height: 0.75;
+            letter-spacing: 0.025em;
+            transform: translate(-50%, -50%) rotate(calc(0deg - var(--rotation)));
+            transform-origin: center;
+            transition: color 750ms ease-in-out, transform 300ms ease-out;
+            white-space: nowrap;
+        }
+
+        .message {
+            z-index: 1;
+            grid-row: 3;
+            width: min(70vw, 30rem);
+            margin: 0;
+            align-self: end;
+            justify-self: end;
+            color: #dadada;
+            font-size: clamp(1.5rem, 1rem + 3vmin, 3.25rem);
+            line-height: 1.2;
+            text-align: right;
+            text-shadow: -1px -1px 0 #121212, 1px 1px 0 #121212,
+                -1px 1px 0 #121212, 1px -1px 0 #121212;
+            text-wrap: balance;
+        }
+
+        .message p {
+            margin: 0;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        @media (hover: hover) {
+            .home-link:hover {
+                color: #121212;
+                background: #dadada;
+                border-color: #dadada;
+            }
+
+            .home-link:hover ~ .background-wrapper .visual {
+                color: #dadada;
+            }
+        }
+
+        .home-link:focus-visible ~ .background-wrapper .visual {
+            color: #dadada;
+        }
+
+        @media (max-height: 28rem) {
+            .error-page {
+                gap: 0.75rem;
+            }
+
+            .message {
+                font-size: clamp(1.25rem, 1rem + 2vmin, 2rem);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .home-link,
+            .visual {
+                transition: none;
+            }
+        }
+    </style>
 </head>
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        height: 100vh;
-        background: #121212;
-        padding: 1em;
-        overflow: hidden;
-    }
-
-    .background-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    .background-wrapper h1 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 60vmax;
-        color: #282828;
-        letter-spacing: 0.025em;
-        margin: 0;
-        transition: 750ms ease-in-out;
-    }
-
-    a {
-        border: 2px solid #555;
-        padding: 0.5em 0.8em;
-        position: fixed;
-        z-index: 1;
-        color: #555;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        transition: 150ms;
-    }
-
-    a svg>polyline {
-        transition: 150ms;
-    }
-
-    a:hover {
-        color: #333;
-        background: #dadada;
-        border-color: transparent;
-    }
-
-    a:hover svg>polyline {
-        stroke: #000;
-    }
-
-    a:hover+.background-wrapper>h1 {
-        color: #dadada;
-    }
-
-    p {
-        color: #dadada;
-        font-size: calc(1em + 3vmin);
-        position: fixed;
-        bottom: 1rem;
-        right: 1.5rem;
-        margin: 0;
-        text-align: right;
-        text-shadow: -1px -1px 0 #121212, 1px 1px 0 #121212, -1px 1px 0 #121212, 1px -1px 0 #121212;
-    }
-
-    @media screen and (min-width: 340px) {
-        p {
-            width: 70%;
-        }
-    }
-/* 
-    @media screen and (min-width: 560px) {
-        p {
-            width: 50%;
-        }
-    }
-
-    @media screen and (min-width: 940px) {
-        p {
-            width: 30%;
-        }
-    }
-
-    @media screen and (min-width: 1300px) {
-        p {
-            width: 25%;
-        }
-    } */
-</style>
 
 <body>
-    <a href="https://wangyifang.com">
-        <svg height="0.8em" width="0.8em" viewBox="0 0 2 1" preserveAspectRatio="none">
-            <polyline fill="none" stroke="#777777" stroke-width="0.1" points="0.9,0.1 0.1,0.5 0.9,0.9" />
-        </svg> WANGYIFANG.COM
-    </a>
-    <div class="background-wrapper">
-        <h1 id="visual">404</h1>
-    </div>
-    <p>你访问的这个页面已经不见了。</p>
-    <script>
-        const visual = document.getElementById("visual")
-        const events = ['resize', 'load']
+    <main class="error-page">
+        <a class="home-link" href="https://wangyifang.com/" aria-label="返回 WANGYIFANG.COM 首页">
+            <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                <polyline fill="none" stroke="currentColor" stroke-width="1.4" points="8,1 2,5 8,9" />
+            </svg>
+            <span>WANGYIFANG.COM</span>
+        </a>
 
-        events.forEach(function (e) {
-            window.addEventListener(e, function () {
-                const width = window.innerWidth
-                const height = window.innerHeight
-                const ratio = 45 / (width / height)
-                visual.style.transform = "translate(-50%, -50%) rotate(-" + ratio + "deg)"
-            });
-        });
+        <div class="background-wrapper" aria-hidden="true">
+            <div class="visual" id="visual">404</div>
+        </div>
+
+        <div class="message">
+            <h1 class="visually-hidden">404：页面未找到</h1>
+            <p>你访问的这个页面已经不见了。</p>
+        </div>
+    </main>
+
+    <script>
+        (() => {
+            const visual = document.getElementById("visual");
+            let frameId;
+
+            const updateRotation = () => {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                const rotation = width > 0 ? 45 * (height / width) : 45;
+
+                visual.style.setProperty("--rotation", `${Math.min(80, Math.max(20, rotation))}deg`);
+                frameId = undefined;
+            };
+
+            const queueRotationUpdate = () => {
+                if (frameId === undefined) {
+                    frameId = window.requestAnimationFrame(updateRotation);
+                }
+            };
+
+            queueRotationUpdate();
+            window.addEventListener("resize", queueRotationUpdate, { passive: true });
+
+            if (window.visualViewport) {
+                window.visualViewport.addEventListener("resize", queueRotationUpdate, { passive: true });
+            }
+        })();
     </script>
 </body>
 
