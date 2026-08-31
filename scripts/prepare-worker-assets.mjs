@@ -29,7 +29,10 @@ const { stdout } = await execFileAsync("git", ["ls-files", "-z"], {
   encoding: "buffer",
   maxBuffer: 16 * 1024 * 1024,
 });
-const trackedFiles = stdout.toString("utf8").split("\0").filter(Boolean);
+const trackedFiles = new Set(
+  stdout.toString("utf8").split("\0").filter(Boolean),
+);
+trackedFiles.add("_headers");
 let copiedFileCount = 0;
 
 for (const relativePath of trackedFiles) {
